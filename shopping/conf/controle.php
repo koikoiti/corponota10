@@ -23,7 +23,7 @@
 				}
 			}else{
 					$Conteudo = $banco->ChamaPhp('inicio');
-				}
+			}
 		
 			#Carrega Pagina Requisitada
 			$SaidaHtml = $banco->CarregaHtml('modelo');
