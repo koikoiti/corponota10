@@ -2,15 +2,17 @@
 	session_start('login');
 	include('functions/banco.php');
 	include('tags.php');
+	
 	class controle{
 		public function __construct(){
-			$msg = '';
+			
 			$banco = new banco;
 			$banco->Conecta();
 			$banco->CarregaPaginas();
 			if ($banco->Pagina){	
 				#Se tiver ele vai buscar no banco a pagina requisitada
 				$num_rows = $banco->BuscaPagina($banco->Pagina);
+				
 				#Se tiver no banco a pagina ele chama!
 				if($num_rows){	
 					#Verifica se ele tem acesso a pagina requisitada

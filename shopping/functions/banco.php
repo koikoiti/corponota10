@@ -155,6 +155,7 @@
 			$Sql = "Select idpagina from s_paginas where nome='".$nome."'";		
 			$result = $this->Execute($Sql);
 			$num_rows = $this->Linha($result);
+		
 			return $num_rows;
 		}
 		
