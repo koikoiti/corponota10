@@ -1,0 +1,71 @@
+<table border="0" width="100%" id="content-table">
+	<tbody>
+		<tr>
+			<th rowspan="3" class="sized">
+				<img src="<%URLPADRAO%>html/style/images/shared/side_shadowleft.jpg" width="20" height="300" alt="">
+			</th>
+			<th class="topleft"></th>
+			<td id="tbl-border-top">&nbsp;</td>
+			<th class="topright"></th>
+			<th rowspan="3" class="sized">
+				<img src="<%URLPADRAO%>html/style/images/shared/side_shadowright.jpg" width="20" height="300" alt="">
+			</th>
+		</tr>
+		<tr>
+			<td id="tbl-border-left"></td>
+			<td>
+				<!-- START CONTENT-TABLE-INNER -->
+				<div id="content-table-inner">
+				<%MSG%>
+				<!--  Tabela com a Busca -->
+				<FORM  style="margin-bottom: 0px;" ACTION="<%URLPADRAO%>lista-doc/busca" METHOD="POST" >
+				<input type ="hidden" name="acao" value="acao">
+					<table style="margin-left: 10px;" border="0" id="id-form">
+						<tbody>
+							<tr>
+								<td>
+									<select style="width: auto; margin-right: 5px;" name="campo">
+		  								<option value="1">Documento</option>
+		  								<option value="2">Empresa</option>
+		  								<option value="3">Data de Emissão</option>
+		  								<option value="4">Data de Vencimento</option>
+		  							</select>
+		  						</td>	
+								<td><input tabindex='1' name="busca" value="" type="text"></td>
+								<td><%BOTAOBUSCAR%></td>
+							</tr>
+						</tbody>
+					</table>
+				</FORM>
+				
+					<!-- START TABLE-CONTENT -->
+					<div id="table-content">
+						<table border="0" width="100%" id="product-table">
+							<tbody>
+								<tr>
+									<th class="table-header-repeat line-left minwidth-1"><a href="<%URLPADRAO%>lista-doc/order/doc">Documento</a></th>
+									<th class="table-header-repeat line-left minwidth-1"><a href="<%URLPADRAO%>lista-doc/order/emp">Empresa</a></th>
+									<th class="table-header-repeat line-left"><a href="<%URLPADRAO%>lista-doc/order/dte">Data de Emissão</a></th>
+									<th class="table-header-repeat line-left"><a href="<%URLPADRAO%>lista-doc/order/dtv">Data de Vencimento</a></th>
+									<th class="table-header-repeat line-left"><a href=#>Opções</a></th>
+								</tr>
+								<%DOCS%>
+							</tbody>
+						</table>
+					</div>
+					<%BOTAO%>
+					<%BOTAOCANCELAR%>
+					<!-- END TABLE-CONTENT -->
+				</div>
+				<div class="clear"></div>
+				<!-- END CONTENT-INNER -->
+			</td>
+			<td id="tbl-border-right"></td>
+		</tr>
+		<tr>
+			<th class="sized bottomleft"></th>
+			<td id="tbl-border-bottom">&nbsp;</td>
+			<th class="sized bottomright"></th>
+		</tr>
+	</tbody>
+</table>

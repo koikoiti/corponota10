@@ -1,0 +1,226 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Facebook Likes You! v1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-05-03 01:22-0800\n"
+"PO-Revision-Date: 2011-08-14 19:02+0100\n"
+"Last-Translator: Piotr Sochalewski <sproject@sproject.name>\n"
+"Language-Team: Georgij Gadjukin <georgij@gadjukin.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Czech\n"
+"X-Poedit-Country: CZECH REPUBLIC\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: facebook-likes-you.php
+msgid "Important info for users"
+msgstr ""
+
+#: facebook-likes-you.php
+msgid "Appearance"
+msgstr "Vzhled"
+
+#: facebook-likes-you.php
+msgid "Width:"
+msgstr "Šířka:"
+
+#: facebook-likes-you.php
+msgid "Height:"
+msgstr ""
+
+#: facebook-likes-you.php
+msgid "Layout:"
+msgstr "Rozložení:"
+
+#: facebook-likes-you.php
+msgid "Verb to display:"
+msgstr "Zobrazené slovo:"
+
+#: facebook-likes-you.php
+msgid "Font:"
+msgstr "Písmo:"
+
+#: facebook-likes-you.php
+msgid "Color Scheme:"
+msgstr "Barevné schéma:"
+
+#: facebook-likes-you.php
+msgid "Fix for W3C Valid XFBML:"
+msgstr ""
+
+#: facebook-likes-you.php
+msgid "Send Button:"
+msgstr ""
+
+#: facebook-likes-you.php
+msgid "It allows your users to easily send your content to their friends. <strong>Requires XFBML</strong>."
+msgstr ""
+
+#: facebook-likes-you.php
+msgid "Google +1 Button:"
+msgstr ""
+
+#: facebook-likes-you.php
+msgid "Use <span title='XFBML version is more versatile, but requires use of the JavaScript SDK' style='border-bottom: 1px dotted #CCC; cursor: help; '>XFBML</span>:"
+msgstr "Použití <span title='XFBML verze má více funkcí, ale vyžaduje použití SDK JavaScriptu' style='border-bottom: 1px dotted #CCC; cursor: help; '>XFBML:</span>"
+
+#: facebook-likes-you.php
+msgid "Use Open Graph:"
+msgstr ""
+
+#: facebook-likes-you.php
+msgid "Mainly fixes an issue with wrong thumbnails. Turn off if you have another Open Graph plugin."
+msgstr ""
+
+#: facebook-likes-you.php
+msgid "Absolute path to default picture (used if not found any):"
+msgstr ""
+
+#: facebook-likes-you.php
+msgid "Back to default"
+msgstr ""
+
+#: facebook-likes-you.php
+msgid "Your app ID:"
+msgstr "Vaše app ID:"
+
+#: facebook-likes-you.php
+msgid "If you have no app ID, you can leave this empty to use default Facebook app ID <code>165570960176857</code>,<br />but remember that you can get your own an app ID by <a href='https://www.facebook.com/developers/createapp.php' target='_blank'>registering your application</a>."
+msgstr "Pokud nemáte app ID, můžete políčko nechat prázdné a použít výchozí app ID Facebooku <code>165570960176857</code>,<br />ale nezapomeňte, že můžete získat svůj vlastní app ID po <a href='https://www.facebook.com/developers/createapp.php' target='_blank'>registraci vaší žádosti</a> ."
+
+#: facebook-likes-you.php
+msgid "Position"
+msgstr "Pozice"
+
+#: facebook-likes-you.php
+msgid "Remember that you can place it manually by <code>[fb-like-button]</code>. There is PHP for that, but you can't use it in WordPress post editor - <code>&lt;?php echo do_shortcode('[fb-like-button]'); ?&gt;</code>."
+msgstr "Nezapomeňte, že můžete umístit ručně <code>[fb-like-button]</code>, kdykoliv budete chtít. There is PHP for that, but you can't use it in WordPress post editor - <code>&lt;?php echo do_shortcode('[fb-like-button]'); ?&gt;</code>."
+
+#: facebook-likes-you.php
+msgid "Show at:"
+msgstr "Zobrazit na:"
+
+#: facebook-likes-you.php
+msgid "Top"
+msgstr "začátku"
+
+#: facebook-likes-you.php
+msgid "Bottom"
+msgstr "konci"
+
+#: facebook-likes-you.php
+msgid "Show on:"
+msgstr "Zobrazit:"
+
+#: facebook-likes-you.php
+msgid "Page"
+msgstr "na stránce"
+
+#: facebook-likes-you.php
+msgid "Post"
+msgstr "u příspěvku"
+
+#: facebook-likes-you.php
+msgid "Home"
+msgstr "ve výpisu"
+
+#: facebook-likes-you.php
+msgid "Search"
+msgstr "u vyhledávání"
+
+#: facebook-likes-you.php
+msgid "Archive"
+msgstr "u archívu"
+
+#: facebook-likes-you.php
+msgid "Margins:"
+msgstr "Marže:"
+
+#: facebook-likes-you.php
+msgid "Exclude posts and pages:"
+msgstr "Vyjmout příspěvky a stránky:"
+
+#: facebook-likes-you.php
+msgid "Exclude categories:"
+msgstr "Vyjmout kategorie:"
+
+#: facebook-likes-you.php
+msgid "You can type for each post/page ID, title, or slug seperated with commas.<br />E.g. <code>17, Irish Stew, beef-stew</code>."
+msgstr "Můžete zadat ID, název nebo zkratku příspěvku/stránky, seznam oddělte čárkami.<br />Např. <code>17, Irish Stew, beef-stew</code> ."
+
+#: facebook-likes-you.php
+msgid "You can type for each category ID, name, or slug seperated with commas.<br />E.g. <code>9, Stinky Cheeses, blue-cheese</code>."
+msgstr "Můžete zadat ID, jméno, nebo zkratku pro každou kategorii, seznam oddělte čárkami.<br />Např. <code>9, Stinky Cheeses, blue-cheese</code> ."
+
+#: facebook-likes-you.php
+msgid "Additional CSS style:"
+msgstr "Dodatečný CSS styl:"
+
+#: facebook-likes-you.php
+msgid "Added properties will be placed between <code>style=\"</code> and <code>\"</code>. If you want refer to Like button in e.g. <strong>style.css</strong>,<br />try to use <code>iframe.fblikes</code> or if you use XFBML <code>.fb_edge_widget_with_comment</code>."
+msgstr "Přidané vlastnosti budou umístěny mezi <code>style=\"</code> a <code>\"</code> . Pokud chcete odkazovat na tlačítko Líbí se mi jako např. v <strong>style.css,</strong><br /> zkuste použít <code>iframe.fblikes</code> nebo pokud používáte XFBML <code>.fb_edge_widget_with_comment</code> ."
+
+#: facebook-likes-you.php
+msgid "Help and Support"
+msgstr "Nápověda a odborná pomoc"
+
+#: facebook-likes-you.php
+msgid "<strong>Free tip:</strong> You can get easily <a href='http://www.facebook.com/insights/' target='_blank'>insights for your website</a> supplied by Facebook."
+msgstr ""
+
+#: facebook-likes-you.php
+msgid "Read the plugin homepage and its comments"
+msgstr "Přečtěte si domovskou stránku pluginu a komentáře"
+
+#: facebook-likes-you.php
+msgid "Donate to this plugin"
+msgstr "Přispějte na tento plugin"
+
+#: facebook-likes-you.php
+msgid "Save Changes"
+msgstr "Uložit změny"
+
+#: facebook-likes-you.php
+msgid "Title:"
+msgstr "Název:"
+
+#: facebook-likes-you.php
+msgid "Facebook Page URL:"
+msgstr "Facebook Page URL:"
+
+#: facebook-likes-you.php
+msgid "The URL of the FB Page for this Like box."
+msgstr "The URL of the FB Page for this Like box."
+
+#: facebook-likes-you.php
+msgid "The width of the widget in pixels."
+msgstr "The width of the widget in pixels."
+
+#: facebook-likes-you.php
+msgid "In pixels too. Needed if you don't use XFBML."
+msgstr "In pixels too. Needed if you don't use XFBML."
+
+# @ fb_like_trans_domain
+#: facebook-likes-you.php
+#, fuzzy
+msgid "Show Faces"
+msgstr "Zobrazit obrázky profilu"
+
+#: facebook-likes-you.php
+msgid "Stream"
+msgstr "Stream"
+
+#: facebook-likes-you.php
+msgid "Show the profile stream for the public profile."
+msgstr "Show the profile stream for the public profile."
+
+#: facebook-likes-you.php
+msgid "Header"
+msgstr "Header"
+
+#: facebook-likes-you.php
+msgid "Show the 'Find us on Facebook' bar at top.<br /><small>Only when either stream or connections are present.</small>"
+msgstr "Show the 'Find us on Facebook' bar at top.<br /><small>Only when either stream or connections are present.</small>"
+

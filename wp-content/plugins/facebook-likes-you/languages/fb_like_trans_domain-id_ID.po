@@ -1,0 +1,225 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Facebook Likes You! v1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-05-03 01:22-0800\n"
+"PO-Revision-Date: 2011-08-15 20:03+0100\n"
+"Last-Translator: Piotr Sochalewski <sproject@sproject.name>\n"
+"Language-Team: Dadan Adrian Y. <adrian@abatasya.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: Indonesian\n"
+"X-Poedit-Country: INDONESIA\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: facebook-likes-you.php
+msgid "Important info for users"
+msgstr "Informasi penting untuk user"
+
+#: facebook-likes-you.php
+msgid "Appearance"
+msgstr "Tampilan"
+
+#: facebook-likes-you.php
+msgid "Width:"
+msgstr "Lebar:"
+
+#: facebook-likes-you.php
+msgid "Height:"
+msgstr "Tinggi:"
+
+#: facebook-likes-you.php
+msgid "Layout:"
+msgstr "Layout:"
+
+#: facebook-likes-you.php
+msgid "Verb to display:"
+msgstr "Kalimat/kata untuk tampilan:"
+
+#: facebook-likes-you.php
+msgid "Font:"
+msgstr "Font:"
+
+#: facebook-likes-you.php
+msgid "Color Scheme:"
+msgstr "Skema Warna:"
+
+#: facebook-likes-you.php
+msgid "Fix for W3C Valid XFBML:"
+msgstr "Perbaikan untuk W3C Valid XFBML"
+
+#: facebook-likes-you.php
+msgid "Send Button:"
+msgstr "Tombol Kirim"
+
+#: facebook-likes-you.php
+msgid "It allows your users to easily send your content to their friends. <strong>Requires XFBML</strong>."
+msgstr "Mengijinkan user anda untuk dengan mudah mengirim konten ke temannya. <strong>Membutuhkan XFBML</strong>"
+
+#: facebook-likes-you.php
+msgid "Google +1 Button:"
+msgstr "Tombol Google +1:"
+
+#: facebook-likes-you.php
+msgid "Use <span title='XFBML version is more versatile, but requires use of the JavaScript SDK' style='border-bottom: 1px dotted #CCC; cursor: help; '>XFBML</span>:"
+msgstr "Gunakan <span title='XFBML lebih serbaguna, tapi membutuhkan JavaScript SDK' style='border-bottom: 1px dotted #CCC; cursor: help; '>XFBML</span>:"
+
+#: facebook-likes-you.php
+msgid "Use Open Graph:"
+msgstr "Gunakan Open Graph"
+
+#: facebook-likes-you.php
+msgid "Mainly fixes an issue with wrong thumbnails. Turn off if you have another Open Graph plugin."
+msgstr "Perbaikan utama masalah thumbnail yang salah. Matikan jika Anda memiliki plugin Open Graph lain."
+
+#: facebook-likes-you.php
+msgid "Absolute path to default picture (used if not found any):"
+msgstr "Path absolut ke gambar default (gunakan jika tidak ditemukan):"
+
+#: facebook-likes-you.php
+msgid "Back to default"
+msgstr "Kembali ke default"
+
+#: facebook-likes-you.php
+msgid "Your app ID:"
+msgstr "Facebook App ID Anda:"
+
+#: facebook-likes-you.php
+msgid "If you have no app ID, you can leave this empty to use default Facebook app ID <code>165570960176857</code>,<br />but remember that you can get your own an app ID by <a href='https://www.facebook.com/developers/createapp.php' target='_blank'>registering your application</a>."
+msgstr "Jika tidak/belum mempunyai app ID, biarkan kosong untuk menggunakan Facebook app ID <code>165570960176857</code> standard.<br />Anda dapat mempunyai app ID sendiri dengan cara <a href='https://www.facebook.com/developers/createapp.php' target='_blank'>mendaftarkan diri</a> disini."
+
+#: facebook-likes-you.php
+msgid "Position"
+msgstr "Posisi"
+
+#: facebook-likes-you.php
+msgid "Remember that you can place it manually by <code>[fb-like-button]</code>. There is PHP for that, but you can't use it in WordPress post editor - <code>&lt;?php echo do_shortcode('[fb-like-button]'); ?&gt;</code>."
+msgstr "Anda dapat menempatkan secara manual menggunakan <code>[fb-like-button]</code> dimana saja. There is PHP for that, but you can't use it in WordPress post editor - <code>&lt;?php echo do_shortcode('[fb-like-button]'); ?&gt;</code>."
+
+#: facebook-likes-you.php
+msgid "Show at:"
+msgstr "Tampilkan dibagian:"
+
+#: facebook-likes-you.php
+msgid "Top"
+msgstr "atas"
+
+#: facebook-likes-you.php
+msgid "Bottom"
+msgstr "bawah"
+
+#: facebook-likes-you.php
+msgid "Show on:"
+msgstr "Tampilkan:"
+
+#: facebook-likes-you.php
+msgid "Page"
+msgstr "dihalaman"
+
+#: facebook-likes-you.php
+msgid "Post"
+msgstr "dipostingan"
+
+#: facebook-likes-you.php
+msgid "Home"
+msgstr "di Home"
+
+#: facebook-likes-you.php
+msgid "Search"
+msgstr "dipencarian"
+
+#: facebook-likes-you.php
+msgid "Archive"
+msgstr "di Arsip"
+
+#: facebook-likes-you.php
+msgid "Margins:"
+msgstr "Batas:"
+
+#: facebook-likes-you.php
+msgid "Exclude posts and pages:"
+msgstr "Kecualikan post dan halaman ini:"
+
+#: facebook-likes-you.php
+msgid "Exclude categories:"
+msgstr "Kecualikan kategori ini:"
+
+#: facebook-likes-you.php
+msgid "You can type for each post/page ID, title, or slug seperated with commas.<br />E.g. <code>17, Irish Stew, beef-stew</code>."
+msgstr "Anda dapat menuliskan beberapa atau semua post/page ID, judul, atau slug dipisahkan dengan koma.<br />Contoh, <code>17, Irish Stew, beef-stew</code>."
+
+#: facebook-likes-you.php
+msgid "You can type for each category ID, name, or slug seperated with commas.<br />E.g. <code>9, Stinky Cheeses, blue-cheese</code>."
+msgstr "Anda dapat menuliskan beberapa atau semua kategori ID, nama, atau slug dipisahkan dengan koma.<br />Contoh, <code>9, Stinky Cheeses, blue-cheese</code>."
+
+#: facebook-likes-you.php
+msgid "Additional CSS style:"
+msgstr "Style CSS tambahan:"
+
+#: facebook-likes-you.php
+msgid "Added properties will be placed between <code>style=\"</code> and <code>\"</code>. If you want refer to Like button in e.g. <strong>style.css</strong>,<br />try to use <code>iframe.fblikes</code> or if you use XFBML <code>.fb_edge_widget_with_comment</code>."
+msgstr "Properti tambahan akan ditempatkan diantara <code>style=\"</code> e <code>\"</code>. Jika Anda ingin menempatkan tombol Like ditempat lain, misalnya <strong>style.css</strong>,<br />cobalah gunakan <code>iframe.fblikes</code> ini atau <code>.fb_edge_widget_with_comment</code> jika Anda menggunakan XFBML."
+
+#: facebook-likes-you.php
+msgid "Help and Support"
+msgstr "Bantuan dan Dukungan"
+
+#: facebook-likes-you.php
+msgid "<strong>Free tip:</strong> You can get easily <a href='http://www.facebook.com/insights/' target='_blank'>insights for your website</a> supplied by Facebook."
+msgstr "<strong>Tip bebas:</strong> Anda dapat dengan mudah <a href='http://www.facebook.com/insights/' target='_blank'>insights for your website</a> supplied by Facebook."
+
+#: facebook-likes-you.php
+msgid "Read the plugin homepage and its comments"
+msgstr "Baca halaman plugin ini dan komentarnya"
+
+#: facebook-likes-you.php
+msgid "Donate to this plugin"
+msgstr "Kirim donasi untuk plugin ini"
+
+#: facebook-likes-you.php
+msgid "Save Changes"
+msgstr "Simpan Perubahan"
+
+#: facebook-likes-you.php
+msgid "Title:"
+msgstr "Judul:"
+
+#: facebook-likes-you.php
+msgid "Facebook Page URL:"
+msgstr "URL Halaman Facebook:"
+
+#: facebook-likes-you.php
+msgid "The URL of the FB Page for this Like box."
+msgstr "URL Halaman FB untuk Like box ini."
+
+#: facebook-likes-you.php
+msgid "The width of the widget in pixels."
+msgstr "Lebar widget dalam pixel."
+
+#: facebook-likes-you.php
+msgid "In pixels too. Needed if you don't use XFBML."
+msgstr "Dalam pixel juga. Diperlukan jika tidak menggunakan XFBML."
+
+#: facebook-likes-you.php
+msgid "Show Faces"
+msgstr "Tampilkan Wajah"
+
+#: facebook-likes-you.php
+msgid "Stream"
+msgstr "Stream"
+
+#: facebook-likes-you.php
+msgid "Show the profile stream for the public profile."
+msgstr "Tampilkan profile stream untuk profil publik."
+
+#: facebook-likes-you.php
+msgid "Header"
+msgstr "Judul"
+
+#: facebook-likes-you.php
+msgid "Show the 'Find us on Facebook' bar at top.<br /><small>Only when either stream or connections are present.</small>"
+msgstr "Tampilkan baris 'Find us on Facebook' diatas.<br/><small>Hanya jika ada stream atau koneksi.</small>"
+

@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+ 
+<link href="http://localhost/columbia/html/style/layout.css" rel="stylesheet" media="all" />
+<link href="http://localhost/columbia/html/bootstrap/css/bootstrap.css" rel="stylesheet" media="all" />
+
+<!-- script type="text/javascript" src="http://localhost/columbia/app/ZClip/jquery-1.9.1.js"></script-->
+<script type="text/javascript" src="http://localhost/columbia/app/ZClip/jquery.zclip.js"></script>
+<script src="http://localhost/columbia/html/bootstrap/js/bootstrap.js" ></script>
+
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="http://localhost/columbia/html/style/js/calendario.js"></script>
+
+<!-- script do input da data -->
+<script>
+  $(document).ready(function() {
+    $(".datepicker").datepicker();
+  });
+</script>
+
+<!-- script para abrir em nova janela, usado no mensagens.php -->
+<script type="text/javascript">
+	function newWindow(url){
+    	window.open(url, '_blank');
+	}
+</script>
+
+<!-- script para copiar texto da textarea para a área de transferência -->
+<script>
+$(document).ready(function(){
+
+    $('button#copy-dynamic').zclip({
+        path:'http://localhost/columbia/app/ZClip/ZeroClipboard.swf',
+        copy:function(){return $('textarea#dynamic').val();}
+    });
+
+    // The link with ID "copy-dynamic" will copy the current value
+    // of a dynamically changing input with the ID "dynamic"
+
+});
+</script>
+
+<!-- script de alerta caso seja chamado no chat -->
+<script>
+//setInterval( function(){aviso()}, 5000 );  ///////// 5 seconds
+
+function aviso(){
+	$(document).ready(function(){
+ 		$.post("http://localhost/columbia/lib/ajax/busca.php",
+ 				{},
+ 				function(dados){
+ 					if(dados){
+ 						retorno = dados.split("|");
+      					r = confirm("Aviso!\n\n" + retorno[0] + "\n" + retorno[1] + "\n\n" + retorno[2] + "\n\n" + retorno[3]);
+      					if(r){
+      						$.post("http://localhost/columbia/lib/ajax/busca.php",{idchat: retorno[4]})
+      					}
+ 					}
+    	});
+  	});
+}
+</script>
+
+
+<!-- script type="text/javascript">
+	var postback = false;
+    window.onbeforeunload = function() {
+    	if (!postback) {
+        	postback = false;
+            return "Leave the page and lose your changes?";
+        }
+    }
+</script-->
+
+<TITLE>Sistema Interno Columbia</TITLE>
+<META NAME="GENERATOR" CONTENT="MAX's HTML Beauty++ 2004">
+
+</HEAD>
+
+<BODY>	
+	<!-- START PAGE-TOP-OUTER -->
+	<div id="page-top-outer">
+		<!-- START PAGE-TOP -->
+		<div id="page-top">
+			<!-- START LOGO -->
+			<div id="logo">
+				<a href="http://localhost/columbia/principal">
+					<img src="<%URLPADRAO%>html/style/images/shared/logocol.png" width="156" height="40" alt="">
+				</a>
+			</div>
+			<!-- END LOGO -->
+			<!-- START TOP-SEARCH -->
+			<div id="top-search">
+				<%BEMVINDO%>
+			</div>
+			<!-- END TOP-SEARCH -->
+			<div class="clear"></div>
+		</div>
+		<!-- END PAGE-TOP -->
+	</div>
+	<!-- END PAGE-TOP-OUTER -->
+	<div class="clear">&nbsp;</div>
+	<!-- START NAV-OUTER-REPEAT -->
+	<div class="nav-outer-repeat">
+		<!-- START NAV-OUTER -->
+		<div class="nav-outer">
+			<!-- NAV-RIGHT // NAO COLOQUEI -->
+			<!-- START NAV -->
+			<div class="nav">
+				<div class="table">
+					<div class="nav-divider">&nbsp;</div>	
+					<ul class="select">
+						<li>
+							<a href="<%URLPADRAO%>principal"><b>Início</b></a>
+						</li>
+					</ul>
+					<div class="nav-divider">&nbsp;</div>
+					<ul class="select">
+						<li>
+							<a href="<%URLPADRAO%>gerencial"><b>Gerencial</b></a>
+						</li>
+					</ul>
+					<div class="nav-divider">&nbsp;</div>
+					<ul class="select">
+						<li>
+							<a href="<%URLPADRAO%>lista-folder"><b>Folders</b></a>
+						</li>
+					</ul>
+					<div class="nav-divider">&nbsp;</div>
+					<ul class="select">
+						<li>
+							<a href="<%URLPADRAO%>lista-acomp"><b>Acompanhamento</b></a>
+						</li>
+					</ul>
+					<div class="nav-divider">&nbsp;</div>
+					<ul class="select">
+						<li>
+							<a href="<%URLPADRAO%>lista-link"><b>Links</b></a>
+						</li>
+					</ul>
+					<div class="nav-divider">&nbsp;</div>
+					<ul class="select">
+						<li>
+							<a href="<%URLPADRAO%>lista-aviso"><b>Avisos</b></a>
+						</li>
+					</ul>
+					<div class="nav-divider">&nbsp;</div>
+					<ul class="select">
+						<li>
+							<a href="<%URLPADRAO%>lista-ideia"><b>Idéias</b></a>
+						</li>
+					</ul>
+					<div class="nav-divider">&nbsp;</div>
+					<ul class="select">
+						<li>
+							<a href="<%URLPADRAO%>lista-falta"><b>Faltas</b></a>
+						</li>
+					</ul>
+					<div class="nav-divider">&nbsp;</div>
+					<ul class="select">
+						<li>
+							<a href="<%URLPADRAO%>lista-manual"><b>Manuais</b></a>
+						</li>
+					</ul>
+					<div class="nav-divider">&nbsp;</div>
+					<ul class="select">
+						<li>
+							<a href="<%URLPADRAO%>lista-edital"><b>Editais</b></a>
+						</li>
+					</ul>
+					<div class="nav-divider">&nbsp;</div>
+					<ul class="select">
+						<li>
+							<a href="<%URLPADRAO%>lista-texto"><b>Textos</b></a>
+						</li>
+					</ul>
+					<div class="nav-divider">&nbsp;</div>
+					<ul class="select">
+						<li>
+							<a href="<%URLPADRAO%>lista-doc"><b>Documentos</b></a>
+						</li>
+					</ul>
+					<div class="nav-divider">&nbsp;</div>
+					<ul class="select">
+						<li>
+							<a href="<%URLPADRAO%>lista-atestado"><b>Atestados</b></a>
+						</li>
+					</ul>
+					<div class="nav-divider">&nbsp;</div>				
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<!-- END NAV -->
+		</div>
+		<!-- END NAV-OUTER -->
+		<div class="clear"></div>
+	</div>
+	<!-- END NAV-OUTER-REPEAT -->
+	<div id="clear">&nbsp;</div>
+	<!-- START CONTENT-OUTER -->
+	<div id="content-outer">
+		<!-- START CONTENT -->
+		<div id="content">
+			<div id="page-heading">
+				<%NOMEPAGINA%>
+			</div>
+			<%CONTEUDO%>
+		</div>
+		<!-- END CONTENT -->
+		<div id="clear">&nbsp;</div>
+	</div>
+	<!-- END CONTENT-OUTER -->
+	<div id="clear">&nbsp;</div>
+	<!-- START FOOTER -->
+	<div id="footer">
+		<!-- START FOOTER-LEFT -->
+		<div id="footer-left">Desenvolvido por Israel Cidade e Evandro Koiti. </div>
+		<!-- END FOOTER-LEFT -->
+		<div id="clear">&nbsp;</div>
+	</div>
+	<!-- END FOOTER -->
+</BODY>
+</HTML>

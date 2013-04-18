@@ -1,0 +1,88 @@
+<table border="0" width="100%" id="content-table">
+<%MSG%>
+	<tbody>
+	<tr>
+		<th rowspan="3" class="sized"><img src="<%URLPADRAO%>html/style/images/shared/side_shadowleft.jpg" width="20" height="300" alt=""></th>
+		<th class="topleft"></th>
+		<td id="tbl-border-top">&nbsp;</td>
+		<th class="topright"></th>
+		<th rowspan="3" class="sized"><img src="<%URLPADRAO%>html/style/images/shared/side_shadowright.jpg" width="20" height="300" alt=""></th>
+	</tr>
+	<tr>
+		<td id="tbl-border-left"></td>
+		<td>
+			<!--  start content-table-inner -->
+			<div id="content-table-inner">
+				<table border="0" width="100%">
+					<tbody>
+						<tr valign="middle" align="center">
+							<td>
+							<!-- start id-form -->
+								<FORM ACTION="" ENCTYPE="multipart/form-data" METHOD="POST" >
+								<table border="0" id="id-form">
+									<tbody>
+										<tr>
+											<th valign="top">Documento:</th>
+											<td><%DOCUMENTO%></td>
+											<td></td>
+										</tr>
+										<tr>
+											<th valign="top">Empresa:</th>
+											<td><%EMPRESA%></td>
+											<td></td>
+										</tr>
+										<tr>
+											<th valign="top">Data de Emissão:</th>
+											<td><input class="datepicker" tabindex='3' name="data_emissao" value="<%DATAEMISSAO%>" type="text"></td>
+											<td></td>
+										</tr>
+										<tr>
+											<th valign="top">Data de Vencimento:</th>
+											<td><input class="datepicker" tabindex='4' name="data_vencimento" value="<%DATAVENCIMENTO%>" type="text"></td>
+											<td></td>
+										</tr>
+										<tr>
+											<th>Documento:</th>
+											<td><input class="file file_1" style="display: inline; width: 300px;"><div style="width: 78px; height: 29px; background-image: url(<%URLPADRAO%>html/style/images/forms/upload_file.gif); display: inline; position: absolute; overflow: hidden; background-position: 100% 50%; background-repeat: no-repeat no-repeat;">
+											<input tabindex='5' name="documento" type="file" class="file_1" style="position: relative; height: 29px; width: 300px; display: inline; cursor: pointer; opacity: 0; margin-left: -222px;"></div></td>
+											<td style="padding-left: 75px">
+												<div class="bubble-left"></div>
+												<div class="bubble-inner">PDF</div>
+												<div class="bubble-right"></div>
+											</td>
+										</tr>
+										<tr>
+											<th>&nbsp;</th>
+											<td valign="top">
+												<%BOTAO%>
+												<%BOTAOCANCELAR%>
+												<%BOTAODELETAR%>
+											</td>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+								<input type ="hidden" name="acao" value="acao">
+								</FORM>
+								<!-- end id-form  -->
+							</td>
+						</tr>
+						<tr>
+							<td><img src="<%URLPADRAO%>html/style/images/shared/blank.gif" width="695" height="1" alt="blank" style="height: 1px;"></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="clear"></div>
+			</div>
+			<!--  end content-table-inner  -->
+		</td>
+		<td id="tbl-border-right"></td>
+	</tr>
+	<tr>
+		<th class="sized bottomleft"></th>
+		<td id="tbl-border-bottom">&nbsp;</td>
+		<th class="sized bottomright"></th>
+	</tr>
+	</tbody>
+</table>

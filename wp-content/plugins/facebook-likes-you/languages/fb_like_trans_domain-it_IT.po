@@ -1,0 +1,225 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Facebook Likes You! v1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-05-03 01:22-0800\n"
+"PO-Revision-Date: 2011-08-17 19:18+0100\n"
+"Last-Translator: Piotr Sochalewski <sproject@sproject.name>\n"
+"Language-Team: Paolo Nicorelli <p.nicorelli@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: facebook-likes-you.php
+msgid "Important info for users"
+msgstr "Informazioni importanti per gli utenti"
+
+#: facebook-likes-you.php
+msgid "Appearance"
+msgstr "Aspetto"
+
+#: facebook-likes-you.php
+msgid "Width:"
+msgstr "Larghezza:"
+
+#: facebook-likes-you.php
+msgid "Height:"
+msgstr "Altezza:"
+
+#: facebook-likes-you.php
+msgid "Layout:"
+msgstr "Layout:"
+
+#: facebook-likes-you.php
+msgid "Verb to display:"
+msgstr "Verbo da usare:"
+
+#: facebook-likes-you.php
+msgid "Font:"
+msgstr "Font:"
+
+#: facebook-likes-you.php
+msgid "Color Scheme:"
+msgstr "Schema di colori:"
+
+#: facebook-likes-you.php
+msgid "Fix for W3C Valid XFBML:"
+msgstr "Fix per usare XFBML con validazione W3C:"
+
+#: facebook-likes-you.php
+msgid "Send Button:"
+msgstr "Pulsante di Invio:"
+
+#: facebook-likes-you.php
+msgid "It allows your users to easily send your content to their friends. <strong>Requires XFBML</strong>."
+msgstr "Permette agli utenti di inviare facilmente il contenuto ai tuoi amici. <strong>Richiede XFBML</strong>."
+
+#: facebook-likes-you.php
+msgid "Google +1 Button:"
+msgstr "Pulsante Google +1:"
+
+#: facebook-likes-you.php
+msgid "Use <span title='XFBML version is more versatile, but requires use of the JavaScript SDK' style='border-bottom: 1px dotted #CCC; cursor: help; '>XFBML</span>:"
+msgstr "Usare <span title='Utilizzare XFBML aumenta la versatilità, ma richiede JavaScript SDK' style='border-bottom: 1px dotted #CCC; cursor: help; '>XFBML</span>:"
+
+#: facebook-likes-you.php
+msgid "Use Open Graph:"
+msgstr "Usa Open Graph:"
+
+#: facebook-likes-you.php
+msgid "Mainly fixes an issue with wrong thumbnails. Turn off if you have another Open Graph plugin."
+msgstr "Aggiusta principalmente un problema con le thumbnails sbagliate. Disattivare se si possiede un altro plugin per Open Graph."
+
+#: facebook-likes-you.php
+msgid "Absolute path to default picture (used if not found any):"
+msgstr "Percorso assoluto all'immagine di default (usata se non ne esistono altre):"
+
+#: facebook-likes-you.php
+msgid "Back to default"
+msgstr "Reimposta l'immagine di default"
+
+#: facebook-likes-you.php
+msgid "Your app ID:"
+msgstr "La tua Facebook App ID:"
+
+#: facebook-likes-you.php
+msgid "If you have no app ID, you can leave this empty to use default Facebook app ID <code>165570960176857</code>,<br />but remember that you can get your own an app ID by <a href='https://www.facebook.com/developers/createapp.php' target='_blank'>registering your application</a>."
+msgstr "Nel caso tu non abbia una Facebook App ID lascia il campo vuoto, verrà utilizzata la ID di default <code>165570960176857</code>.<br />Ricordati che puoi ottenere una App ID <a href='https://www.facebook.com/developers/createapp.php' target='_blank'>registrando l'applicazione qui</a>."
+
+#: facebook-likes-you.php
+msgid "Position"
+msgstr "Posizione"
+
+#: facebook-likes-you.php
+msgid "Remember that you can place it manually by <code>[fb-like-button]</code>. There is PHP for that, but you can't use it in WordPress post editor - <code>&lt;?php echo do_shortcode('[fb-like-button]'); ?&gt;</code>."
+msgstr "Puoi posizionare il like-it inserendo il codice <code>[fb-like-button]</code> ovunque tu voglia. There is PHP for that, but you can't use it in WordPress post editor - <code>&lt;?php echo do_shortcode('[fb-like-button]'); ?&gt;</code>."
+
+#: facebook-likes-you.php
+msgid "Show at:"
+msgstr "Visualizza in:"
+
+#: facebook-likes-you.php
+msgid "Top"
+msgstr "alto"
+
+#: facebook-likes-you.php
+msgid "Bottom"
+msgstr "basso"
+
+#: facebook-likes-you.php
+msgid "Show on:"
+msgstr "Visualizza:"
+
+#: facebook-likes-you.php
+msgid "Page"
+msgstr "nella Pagina"
+
+#: facebook-likes-you.php
+msgid "Post"
+msgstr "nell'Articolo"
+
+#: facebook-likes-you.php
+msgid "Home"
+msgstr "in Home"
+
+#: facebook-likes-you.php
+msgid "Search"
+msgstr "in Cerca"
+
+#: facebook-likes-you.php
+msgid "Archive"
+msgstr "nell'Archivio"
+
+#: facebook-likes-you.php
+msgid "Margins:"
+msgstr "Margini:"
+
+#: facebook-likes-you.php
+msgid "Exclude posts and pages:"
+msgstr "Escludere Articoli e Pagine:"
+
+#: facebook-likes-you.php
+msgid "Exclude categories:"
+msgstr "Escludere Categorie:"
+
+#: facebook-likes-you.php
+msgid "You can type for each post/page ID, title, or slug seperated with commas.<br />E.g. <code>17, Irish Stew, beef-stew</code>."
+msgstr "Per ogni Articolo/Pagina puoi scrivere ID, titolo o 'slug' separandoli con virgole.<br />Ad esempio: <code>17, Stufato Irlandese, stufato-carne</code>."
+
+#: facebook-likes-you.php
+msgid "You can type for each category ID, name, or slug seperated with commas.<br />E.g. <code>9, Stinky Cheeses, blue-cheese</code>."
+msgstr "Per ogni Categoria puoi scrivere ID, nome o 'slug' separandoli con virgole.<br />Ad esempio: <code>17, Formaggio puzzolente, gorgonzola</code>."
+
+#: facebook-likes-you.php
+msgid "Additional CSS style:"
+msgstr "Stile CSS aggiuntivo:"
+
+#: facebook-likes-you.php
+msgid "Added properties will be placed between <code>style=\"</code> and <code>\"</code>. If you want refer to Like button in e.g. <strong>style.css</strong>,<br />try to use <code>iframe.fblikes</code> or if you use XFBML <code>.fb_edge_widget_with_comment</code>."
+msgstr "Posiziona le proprietà aggiuntive tra <code>style=\"</code> e <code>\"</code>. Se vuoi riferirti al pulsante Like nel foglio di stile <strong>style.css</strong>,<br /> utilizza <code>iframe.fblikes</code> oppure se usi XFBML <code>.fb_edge_widget_with_comment</code>."
+
+#: facebook-likes-you.php
+msgid "Help and Support"
+msgstr "Aiuto e Supporto"
+
+#: facebook-likes-you.php
+msgid "<strong>Free tip:</strong> You can get easily <a href='http://www.facebook.com/insights/' target='_blank'>insights for your website</a> supplied by Facebook."
+msgstr "<strong>Avviso:</strong> Puoi usare facilmente <a href='http://www.facebook.com/insights/' target='_blank'>insights per il tuo sito</a> fornito da Facebook."
+
+#: facebook-likes-you.php
+msgid "Read the plugin homepage and its comments"
+msgstr "Vai alla homepage del plugins ed leggi i commenti"
+
+#: facebook-likes-you.php
+msgid "Donate to this plugin"
+msgstr "Fai una donazione per il plugin"
+
+#: facebook-likes-you.php
+msgid "Save Changes"
+msgstr "Salva Modifiche"
+
+#: facebook-likes-you.php
+msgid "Title:"
+msgstr "Titolo:"
+
+#: facebook-likes-you.php
+msgid "Facebook Page URL:"
+msgstr "Indirizzo URL della pagina Facebook:"
+
+#: facebook-likes-you.php
+msgid "The URL of the FB Page for this Like box."
+msgstr "L'indirizzo URL della pagina FB per questo box Mi Piace."
+
+#: facebook-likes-you.php
+msgid "The width of the widget in pixels."
+msgstr "La lunghezza del contenitore in pixels."
+
+#: facebook-likes-you.php
+msgid "In pixels too. Needed if you don't use XFBML."
+msgstr "Anche questo in pixels. Ti serve se non usi XFBML."
+
+#: facebook-likes-you.php
+msgid "Show Faces"
+msgstr "Mostra Volti"
+
+#: facebook-likes-you.php
+msgid "Stream"
+msgstr "Stream"
+
+#: facebook-likes-you.php
+msgid "Show the profile stream for the public profile."
+msgstr "Mostra lo stream del il profilo pubblico."
+
+#: facebook-likes-you.php
+msgid "Header"
+msgstr "Intestazioni"
+
+#: facebook-likes-you.php
+msgid "Show the 'Find us on Facebook' bar at top.<br /><small>Only when either stream or connections are present.</small>"
+msgstr "Mostra la barra 'Cercaci su Facebook' in alto.<br /><small>Solo quando gli stream o le connessioni sono presenti.</small>"
+
