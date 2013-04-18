@@ -1,12 +1,12 @@
 <?php
 	
 	#Include nas funcoes da tela principal
-	include('functions/banco-principal.php');
+	include('functions/banco-inicio.php');
 	
 	#Instancia objeto que vai tratar o banco de dados dessa pagina
-	$banco = new bancoprincipal();
+	$banco = new bancoinicio();
 	
 	
 	#Imprime tela
-	$Conteudo = $banco->CarregaHtml('principal');
+	$Conteudo = $banco->CarregaHtml('inicio');
 ?>

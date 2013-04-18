@@ -1,226 +1,166 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<HTML>
-<HEAD>
- 
-<link href="http://localhost/columbia/html/style/layout.css" rel="stylesheet" media="all" />
-<link href="http://localhost/columbia/html/bootstrap/css/bootstrap.css" rel="stylesheet" media="all" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="pt-BR">
+<head profile="http://gmpg.org/xfn/11">
+<meta content='2ec79ceb-0886-4ac9-8cec-f7580e1092cb' name='validaPP' />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Corpo Nota 10 | Só mais um site WordPress</title>
+<link rel="stylesheet" href="http://localhost/corponota10/wp-content/themes/NewsLayer/lib/css/reset.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="http://localhost/corponota10/wp-content/themes/NewsLayer/lib/css/defaults.css" type="text/css" media="screen, projection" />
+<!--[if lt IE 8]><link rel="stylesheet" href="http://localhost/corponota10/wp-content/themes/NewsLayer/lib/css/ie.css" type="text/css" media="screen, projection" /><![endif]-->
 
-<!-- script type="text/javascript" src="http://localhost/columbia/app/ZClip/jquery-1.9.1.js"></script-->
-<script type="text/javascript" src="http://localhost/columbia/app/ZClip/jquery.zclip.js"></script>
-<script src="http://localhost/columbia/html/bootstrap/js/bootstrap.js" ></script>
+<link rel="stylesheet" href="http://localhost/corponota10/wp-content/themes/NewsLayer/style.css" type="text/css" media="screen, projection" />
 
-<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script src="http://localhost/columbia/html/style/js/calendario.js"></script>
+<script type='text/javascript' src='http://localhost/corponota10/wp-includes/js/jquery/jquery.js?ver=1.7.2'></script>
+<script type='text/javascript' src='http://localhost/corponota10/wp-content/themes/NewsLayer/lib/js/superfish.js?ver=3.4.2'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://localhost/corponota10/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://localhost/corponota10/wp-includes/wlwmanifest.xml" /> 
 
-<!-- script do input da data -->
-<script>
-  $(document).ready(function() {
-    $(".datepicker").datepicker();
-  });
-</script>
+<link rel="shortcut icon" href="http://localhost/corponota10/wp-content/themes/NewsLayer/images/favicon.png" type="image/x-icon" />
+<link rel="alternate" type="application/rss+xml" title="Corpo Nota 10 RSS Feed" href="http://localhost/corponota10/?feed=rss2" />
+<link rel="pingback" href="http://localhost/corponota10/xmlrpc.php" />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
 
-<!-- script para abrir em nova janela, usado no mensagens.php -->
-<script type="text/javascript">
-	function newWindow(url){
-    	window.open(url, '_blank');
-	}
-</script>
-
-<!-- script para copiar texto da textarea para a �rea de transfer�ncia -->
-<script>
-$(document).ready(function(){
-
-    $('button#copy-dynamic').zclip({
-        path:'http://localhost/columbia/app/ZClip/ZeroClipboard.swf',
-        copy:function(){return $('textarea#dynamic').val();}
-    });
-
-    // The link with ID "copy-dynamic" will copy the current value
-    // of a dynamically changing input with the ID "dynamic"
-
-});
-</script>
-
-<!-- script de alerta caso seja chamado no chat -->
-<script>
-//setInterval( function(){aviso()}, 5000 );  ///////// 5 seconds
-
-function aviso(){
-	$(document).ready(function(){
- 		$.post("http://localhost/columbia/lib/ajax/busca.php",
- 				{},
- 				function(dados){
- 					if(dados){
- 						retorno = dados.split("|");
-      					r = confirm("Aviso!\n\n" + retorno[0] + "\n" + retorno[1] + "\n\n" + retorno[2] + "\n\n" + retorno[3]);
-      					if(r){
-      						$.post("http://localhost/columbia/lib/ajax/busca.php",{idchat: retorno[4]})
-      					}
- 					}
-    	});
-  	});
-}
-</script>
+<!-- Featured Posts -->
+<script src="http://localhost/corponota10/wp-content/themes/NewsLayer/includes/featuredposts/scripts/jquery.cycle.all.js" type="text/javascript"></script>
+<!-- /jquery.cycle.all.js -->
 
 
-<!-- script type="text/javascript">
-	var postback = false;
-    window.onbeforeunload = function() {
-    	if (!postback) {
-        	postback = false;
-            return "Leave the page and lose your changes?";
-        }
-    }
-</script-->
+</head>
 
-<TITLE>Sistema Interno Columbia</TITLE>
-<META NAME="GENERATOR" CONTENT="MAX's HTML Beauty++ 2004">
+<body class="home blog">
 
-</HEAD>
+<div id="container">
 
-<BODY>	
-	<!-- START PAGE-TOP-OUTER -->
-	<div id="page-top-outer">
-		<!-- START PAGE-TOP -->
-		<div id="page-top">
-			<!-- START LOGO -->
-			<div id="logo">
-				<a href="http://localhost/columbia/principal">
-					<img src="<%URLPADRAO%>html/style/images/shared/logocol.png" width="156" height="40" alt="">
-				</a>
-			</div>
-			<!-- END LOGO -->
-			<!-- START TOP-SEARCH -->
-			<div id="top-search">
-				<%BEMVINDO%>
-			</div>
-			<!-- END TOP-SEARCH -->
-			<div class="clear"></div>
+            <div class="clearfix">
+            			        <div class="menu-primary-container">
+			<ul class="menus menu-primary">
+                <li class="current_page_item"><a href="http://localhost/corponota10">Home</a></li>
+				<li class="page_item page-item-2"><a href="http://localhost/corponota10/?page_id=2">Página de Exemplo</a></li>
+			</ul>
 		</div>
-		<!-- END PAGE-TOP -->
-	</div>
-	<!-- END PAGE-TOP-OUTER -->
-	<div class="clear">&nbsp;</div>
-	<!-- START NAV-OUTER-REPEAT -->
-	<div class="nav-outer-repeat">
-		<!-- START NAV-OUTER -->
-		<div class="nav-outer">
-			<!-- NAV-RIGHT // NAO COLOQUEI -->
-			<!-- START NAV -->
-			<div class="nav">
-				<div class="table">
-					<div class="nav-divider">&nbsp;</div>	
-					<ul class="select">
-						<li>
-							<a href="<%URLPADRAO%>principal"><b>In�cio</b></a>
-						</li>
-					</ul>
-					<div class="nav-divider">&nbsp;</div>
-					<ul class="select">
-						<li>
-							<a href="<%URLPADRAO%>gerencial"><b>Gerencial</b></a>
-						</li>
-					</ul>
-					<div class="nav-divider">&nbsp;</div>
-					<ul class="select">
-						<li>
-							<a href="<%URLPADRAO%>lista-folder"><b>Folders</b></a>
-						</li>
-					</ul>
-					<div class="nav-divider">&nbsp;</div>
-					<ul class="select">
-						<li>
-							<a href="<%URLPADRAO%>lista-acomp"><b>Acompanhamento</b></a>
-						</li>
-					</ul>
-					<div class="nav-divider">&nbsp;</div>
-					<ul class="select">
-						<li>
-							<a href="<%URLPADRAO%>lista-link"><b>Links</b></a>
-						</li>
-					</ul>
-					<div class="nav-divider">&nbsp;</div>
-					<ul class="select">
-						<li>
-							<a href="<%URLPADRAO%>lista-aviso"><b>Avisos</b></a>
-						</li>
-					</ul>
-					<div class="nav-divider">&nbsp;</div>
-					<ul class="select">
-						<li>
-							<a href="<%URLPADRAO%>lista-ideia"><b>Id�ias</b></a>
-						</li>
-					</ul>
-					<div class="nav-divider">&nbsp;</div>
-					<ul class="select">
-						<li>
-							<a href="<%URLPADRAO%>lista-falta"><b>Faltas</b></a>
-						</li>
-					</ul>
-					<div class="nav-divider">&nbsp;</div>
-					<ul class="select">
-						<li>
-							<a href="<%URLPADRAO%>lista-manual"><b>Manuais</b></a>
-						</li>
-					</ul>
-					<div class="nav-divider">&nbsp;</div>
-					<ul class="select">
-						<li>
-							<a href="<%URLPADRAO%>lista-edital"><b>Editais</b></a>
-						</li>
-					</ul>
-					<div class="nav-divider">&nbsp;</div>
-					<ul class="select">
-						<li>
-							<a href="<%URLPADRAO%>lista-texto"><b>Textos</b></a>
-						</li>
-					</ul>
-					<div class="nav-divider">&nbsp;</div>
-					<ul class="select">
-						<li>
-							<a href="<%URLPADRAO%>lista-doc"><b>Documentos</b></a>
-						</li>
-					</ul>
-					<div class="nav-divider">&nbsp;</div>
-					<ul class="select">
-						<li>
-							<a href="<%URLPADRAO%>lista-atestado"><b>Atestados</b></a>
-						</li>
-					</ul>
-					<div class="nav-divider">&nbsp;</div>				
-					<div class="clear"></div>
-				</div>
-				<div class="clear"></div>
-			</div>
-			<!-- END NAV -->
+                      <!--.primary menu--> 	
+                </div>
+        
+
+    <div id="header">
+    
+        <div class="logo">
+         
+            <a href="http://localhost/corponota10"><img src="http://localhost/corponota10/wp-content/themes/NewsLayer/images/logo.png" alt="Corpo Nota 10" title="Corpo Nota 10" /></a>
+         
+        </div><!-- .logo -->
+
+        <div class="header-right">
+            <a href="http://fthemes.com" target="_blank"><img src="http://fthemes.com/wp-content/pro/b2.gif" alt="Free WordPress Themes" title="Free WordPress Themes" /></a> 
+        </div><!-- .header-right -->
+        
+    </div><!-- #header -->
+    
+            <div class="clearfix">
+            			        <div class="menu-secondary-container">
+			<ul class="menus menu-secondary">
+					<li class="cat-item cat-item-1"><a href="http://localhost/corponota10/?cat=1" title="View all posts filed under Sem categoria">Sem categoria</a>
+</li>
+			</ul>
 		</div>
-		<!-- END NAV-OUTER -->
-		<div class="clear"></div>
+                      <!--.secondary menu--> 	
+                </div>
+    
+    <div id="main">
+    <%CONTEUDO%><%BEMVINDO%><%NOMEPAGINA%>
+    </div><!-- #main -->
+    
+    
+    <div id="footer-widgets" class="clearfix">
+                <div class="footer-widget-box">
+            <ul class="widget-container"><li class="widget"><h3 class="widgettitle">Lista de Links</h3>
+	<ul class='xoxo blogroll'>
+<li><a href="http://wordpress.org/news/">Blog do WordPress</a></li>
+<li><a href="http://codex.wordpress.org/pt-br:Página_Inicial">Documentação</a></li>
+<li><a href="http://br.forums.wordpress.org/forum/pedidos-e-feedback">Feedback</a></li>
+<li><a href="http://br.forums.wordpress.org/">Fórum de Suporte</a></li>
+<li><a href="http://planet.wordpress.org/">Planeta WordPress</a></li>
+<li><a href="http://wordpress.org/extend/plugins/">Plugins</a></li>
+<li><a href="http://wordpress.org/extend/themes/">Temas</a></li>
+
+	</ul>
+</li></ul>
+        </div>
+        
+        <div class="footer-widget-box">
+            <ul class="widget-container"><li class="widget"><h3 class="widgettitle">Tags</h3><div class="tagcloud"></div>
+</li></ul>        </div>
+        
+        <div class="footer-widget-box footer-widget-box-last">
+            <ul class="widget-container"><li class="widget"><h3 class="widgettitle">Acesso Restrito</h3>			<div class="textwidget"> 
+		<form action="shopping/login" method="post">
+		<input type ="hidden" name="acao" value="acao">
+		<div style="width: 40px;">Login:</div><input type="text" name="user" style="width: 100px;" />
+		<div style="width: 40px;">Senha:</div><input type="password" name="pass" style="width: 100px;" />
+		<input type="submit" value="Entrar" />
+		</form>
+
 	</div>
-	<!-- END NAV-OUTER-REPEAT -->
-	<div id="clear">&nbsp;</div>
-	<!-- START CONTENT-OUTER -->
-	<div id="content-outer">
-		<!-- START CONTENT -->
-		<div id="content">
-			<div id="page-heading">
-				<%NOMEPAGINA%>
-			</div>
-			<%CONTEUDO%>
-		</div>
-		<!-- END CONTENT -->
-		<div id="clear">&nbsp;</div>
-	</div>
-	<!-- END CONTENT-OUTER -->
-	<div id="clear">&nbsp;</div>
-	<!-- START FOOTER -->
-	<div id="footer">
-		<!-- START FOOTER-LEFT -->
-		<div id="footer-left">Desenvolvido por Israel Cidade e Evandro Koiti. </div>
-		<!-- END FOOTER-LEFT -->
-		<div id="clear">&nbsp;</div>
-	</div>
-	<!-- END FOOTER -->
-</BODY>
-</HTML>
+		</li></ul>        </div>
+        
+    </div>
+
+    <div id="footer">
+    
+        <div id="copyrights">
+             &copy; 2013  <a href="http://localhost/corponota10/">Corpo Nota 10</a> 
+        </div>
+        
+                
+        <div id="credits">Powered by <a href="http://wordpress.org/"><strong>WordPress</strong></a> | Designed by: <a href="http://fthemes.com">FThemes.com</a> | Thanks to <a href="http://www.youtube-to-mp3-converter.org/">YouTube to Mp3 Converter</a>, <a href="http://photo-editor-free.net">free photo editor</a> and <a href="http://wordpress3themes.com/">WordPress 3.4 Themes</a></div><!-- #credits -->
+        
+    </div><!-- #footer -->
+    
+</div><!-- #container -->
+
+<script type='text/javascript' src='http://localhost/corponota10/wp-includes/js/hoverIntent.js?ver=r6'></script>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+jQuery.noConflict();
+jQuery(function(){ 
+	jQuery('ul.menu-primary').superfish({ 
+	animation: {opacity:'show'},
+autoArrows:  true,
+                dropShadows: false, 
+                speed: 200,
+                delay: 800
+                });
+            });
+
+jQuery(function(){ 
+	jQuery('ul.menu-secondary').superfish({ 
+	animation: {opacity:'show'},
+autoArrows:  true,
+                dropShadows: false, 
+                speed: 200,
+                delay: 800
+                });
+            });
+
+jQuery(document).ready(function() {
+	jQuery('.fp-slides').cycle({
+		fx: 'scrollHorz',
+		timeout: 4000,
+		delay: 0,
+		speed: 400,
+		next: '.fp-next',
+		prev: '.fp-prev',
+		pager: '.fp-pager',
+		continuous: 0,
+		sync: 1,
+		pause: 1,
+		pauseOnPagerHover: 1,
+		cleartype: true,
+		cleartypeNoBg: true
+	});
+ });
+
+/* ]]> */
+</script>
+</body>
+</html>

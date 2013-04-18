@@ -8,7 +8,6 @@
 			$banco = new banco;
 			$banco->Conecta();
 			$banco->CarregaPaginas();
-			
 			if ($banco->Pagina){	
 				#Se tiver ele vai buscar no banco a pagina requisitada
 				$num_rows = $banco->BuscaPagina($banco->Pagina);
@@ -18,17 +17,18 @@
 					$Conteudo = $banco->ChamaPhp($banco->Pagina);	
 					
 				}else{
-					$Conteudo = $banco->ChamaPhp('principal');
+					$Conteudo = $banco->ChamaPhp('404');
 				}
-			}	
+			}else{
+					$Conteudo = $banco->ChamaPhp('inicio');
+				}
 		
 			#Carrega Pagina Requisitada
 			$SaidaHtml = $banco->CarregaHtml('modelo');
 			$SaidaHtml = str_replace('<%CONTEUDO%>',$Conteudo,$SaidaHtml);
-			$SaidaHtml = str_replace('<%MSG%>',$msg,$SaidaHtml);
 			$SaidaHtml = str_replace('<%URLPADRAO%>',UrlPadrao,$SaidaHtml);
 
-			#Imprimi tela
+			#Imprime tela
 			echo $SaidaHtml;
 			
 		}
