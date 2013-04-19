@@ -32,6 +32,10 @@ define('DB_CHARSET', 'utf8');
 
 /** O tipo de collate do banco de dados. Não altere isso se tiver dúvidas. */
 define('DB_COLLATE', '');
+/** url padrao - se deletar ira apontar para a web www.corponota10.com.br */
+
+define ('WP_HOME', 'http://localhost/corponota10');
+define ('WP_SITEURL', 'http://localhost/corponota10');
 
 /**#@+
  * Chaves únicas de autenticação e salts.

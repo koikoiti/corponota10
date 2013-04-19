@@ -97,14 +97,7 @@
         function footer_3_default_widgets ()
         {
             global $theme;
-            $theme->display_widget('Text', array('title' => 'Acesso Restrito', 'text' => ' 
-		<form action="" method="post">
-		<div style="width: 40px;">Login:</div><input type="text" name="user" style="width: 100px;" />
-		<div style="width: 40px;">Senha:</div><input type="password" name="pass" style="width: 100px;" />
-		<input type="submit" value="Entrar" />
-		</form>
-
-	'));
+            $theme->display_widget('Text', array('title' => 'Contact', 'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis.<br /><br /> <span style="font-weight: bold;">Our Company Inc.</span><br />2458 S . 124 St.Suite 47<br />Town City 21447<br />Phone: 124-457-1178<br />Fax: 565-478-1445'));
         }
     }
 
@@ -124,4 +117,5 @@ $excerpt = implode(" ",$excerpt);
 $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
 return $excerpt;
 }
+?>
 ?>
