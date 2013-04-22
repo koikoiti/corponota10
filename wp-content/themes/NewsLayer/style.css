@@ -1167,8 +1167,13 @@ a.tweets-widget-time:hover {
 /* = PRODUTOS
 -------------------------------------------------------------- */
 .produto{
-	width: 100px;
+	width: 640px;
+	}
+	
+.produto-itens{
+	width: 157px;
 	height: 100px;
+	float:left;
 	background-color: #000000;
 	}
 

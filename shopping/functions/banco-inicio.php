@@ -18,11 +18,10 @@
 					$Linha = str_replace('<%IDLOJA%>', $rs['idloja'], $Linha);
 					$Linha = str_replace('<%NOME%>',$rs['nome'],$Linha);
 					$Linha = str_replace('<%CATEGORIA%>',$rs['categoria'],$Linha);
-					$Linha = str_replace('<%SUBCATEGORIA%>', $rs['subcategoria']);
-					$Linha = str_replace('<%IMAGEM%>',$rs['imagem']);
-					$Linha = str_replace('<%PRECO%>',$rs['preco']);
-					$Linha = str_replace('<%LINK%>',$rs['link']);
-					var_dump($Linha);
+					$Linha = str_replace('<%SUBCATEGORIA%>', $rs['subcategoria'],$Linha);
+					$Linha = str_replace('<%IMAGEM%>',$rs['imagem'],$Linha);
+					$Linha = str_replace('<%PRECO%>',$rs['preco'],$Linha);
+					$Linha = str_replace('<%LINK%>',$rs['link'],$Linha);
 					$Produtos .= $Linha;
 				}
 			}else{
@@ -30,6 +29,5 @@
 			}
 			return $Produtos;
 		}
-		
-		
 	}
+?>
