@@ -5,7 +5,8 @@
 		function ListaProdutosInicio($Auxilio){
 			$Banco_Vazio = "Banco esta Vazio";
 			#Query Busca Docs
-			$Sql = "Select * from s_produto";
+			$Sql = "Select P.*,L.nome as nomeloja from s_produto P 
+					INNER JOIN s_loja L on P.idloja = L.idloja";
 			$result = parent::Execute($Sql);
 			$num_rows = parent::Linha($result);
 			
@@ -22,6 +23,7 @@
 					$Linha = str_replace('<%IMAGEM%>',$rs['imagem'],$Linha);
 					$Linha = str_replace('<%PRECO%>',$rs['preco'],$Linha);
 					$Linha = str_replace('<%LINK%>',$rs['link'],$Linha);
+					$Linha = str_replace('<%NOMELOJA%>',$rs['nomeloja'],$Linha);
 					$Produtos .= $Linha;
 				}
 			}else{

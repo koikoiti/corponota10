@@ -1166,16 +1166,24 @@ a.tweets-widget-time:hover {
 
 /* = PRODUTOS
 -------------------------------------------------------------- */
-.produto{
+.produto-inicio{
 	width: 640px;
-	}
+	margin-left: 3px;
+}
 	
-.produto-itens{
-	width: 210px;
-	height: 500px;
+.produto-itens-inicio{
+	width: 200px;
+	height: 350px;
 	float:left;
-	background-color: #000000;
-	}
+	background-color: #ffffff;
+	border:1px solid #EFEFEF;
+}
+
+.loja-inicio{
+	width: 290px;
+	background-color: red;
+	float: right;
+}
 
 /* =COMMENTS
 -------------------------------------------------------------- */
