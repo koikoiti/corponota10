@@ -1,7 +1,1 @@
-# Do not remove this line, otherwise mod_rewrite rules will stop working
-RewriteBase /
-
-
-# BEGIN WordPress
-
-# END WordPress
+# Do not remove this line, otherwise mod_rewrite rules will stop workingRewriteBase /# BEGIN WordPress# END WordPress
