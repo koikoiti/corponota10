@@ -67,6 +67,12 @@
 			</ul>
 		</div><!--.secondary menu--> 	
 	</div>
+	<div id="search" title="Digite e tecle enter para pesquisar">
+    	<form method="post" name="form1" id="searchform" action="javascript:location.href='<%URLPADRAO%>/busca/' + document.getElementById('s').value">
+        	<input type="text" value="Pesquisar" name="pesquisar" id="s" onblur="if (this.value == '')  {this.value = 'Pesquisar';}" onfocus="if (this.value == 'Pesquisar') {this.value = '';}">
+        	<button onclick="location.href='<%URLPADRAO%>/busca/' + document.getElementById('s').value" class="btn btn-primary" type="button">Buscar</button>
+    	</form>
+	</div>
     
     <div id="main">
     <%CONTEUDO%>
