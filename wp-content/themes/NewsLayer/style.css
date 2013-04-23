@@ -1181,12 +1181,8 @@ a.tweets-widget-time:hover {
 
 .loja-inicio{
 	width: 290px;
+	background-color: red;
 	float: right;
-}
-
-.loja-inicio-itens{
-	border:1px solid #000000;
-	padding-left: 25px;
 }
 
 /* =COMMENTS

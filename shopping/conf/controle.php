@@ -9,7 +9,6 @@
 			$banco = new banco;
 			$banco->Conecta();
 			$banco->CarregaPaginas();
-
 			if ($banco->Pagina){	
 				#Se tiver ele vai buscar no banco a pagina requisitada
 				$num_rows = $banco->BuscaPagina($banco->Pagina);

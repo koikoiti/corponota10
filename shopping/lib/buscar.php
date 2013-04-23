@@ -2,11 +2,11 @@
 	#Declara Variaveis
 	
 	#Include nas funcoes do documento
-	include('functions/banco-pesquisar.php');
+	include('functions/banco-buscar.php');
 	
 	#Instancia objeto que vai tratar o banco de dados dessa pagina
-	$banco = new bancopesquisar;
+	$banco = new bancobuscar;
 	
 	#Imprime Valores
-	$Conteudo = $banco->CarregaHtml('pesquisar');
+	$Conteudo = $banco->CarregaHtml('buscar');
 ?>
