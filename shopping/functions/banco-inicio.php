@@ -31,5 +31,26 @@
 			}
 			return $Produtos;
 		}
+	#Funcao que lista os Docs
+		function ListaLojasInicio($Auxilio){
+			$Banco_Vazio = "Banco esta Vazio";
+			#Query Busca Docs
+			$Sql = "Select * from s_loja";
+			$result = parent::Execute($Sql);
+			$num_rows = parent::Linha($result);
+			#Monta no Html a Listagem
+			if ($num_rows){
+				while( $rs = mysql_fetch_array($result , MYSQL_ASSOC) )
+				{
+					$Linha = $Auxilio;
+					$Linha = str_replace('<%ID%>',$rs['idloja'],$Linha);
+					$Linha = str_replace('<%NOME%>',$rs['nome'],$Linha);
+					$Lojas .= $Linha;
+				}
+			}else{
+				
+			}
+			return $Lojas;
+		}
 	}
 ?>
