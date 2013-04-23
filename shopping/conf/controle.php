@@ -9,7 +9,11 @@
 			$banco = new banco;
 			$banco->Conecta();
 			$banco->CarregaPaginas();
+<<<<<<< HEAD
 			
+=======
+
+>>>>>>> d38a91d243e78cb7c796d5778d426f4d30b344c7
 			if ($banco->Pagina){	
 				#Se tiver ele vai buscar no banco a pagina requisitada
 				$num_rows = $banco->BuscaPagina($banco->Pagina);
