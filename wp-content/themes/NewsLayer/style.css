@@ -1183,12 +1183,21 @@ a.tweets-widget-time:hover {
 	width: 290px;
 	float: right;
 }
-
 .loja-inicio-itens{
-	border:1px solid #000000;
-	padding-left: 25px;
+	border:1px solid #EFEFEF;
 }
 
+.div-comprar{
+	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	width: 180px;
+	height: 40px;
+	color: #27A9D4;
+	background-color: #FE8323;
+	clear: both;
+}
 /* =COMMENTS
 -------------------------------------------------------------- */
 
