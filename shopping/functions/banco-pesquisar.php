@@ -4,9 +4,17 @@
 		function ListaPesquisa($Auxilio, $busca){
 			$Banco_Vazio = "Banco esta Vazio";
 			$busca = urldecode($busca);
+			if($busca == 'Pesquisar no Shopping'){
+				$busca = '';
+			}
 			#Query Busca Produtos
-			$Sql = "Select P.*,L.nome as nomeloja from s_produto P
-					INNER JOIN s_loja L on P.idloja = L.idloja";
+			$Sql = "SELECT P.*,L.nome AS nomeloja FROM s_produto P
+					INNER JOIN s_loja L on P.idloja = L.idloja
+					WHERE (P.nome LIKE '%".$busca."%' 
+							OR P.categoria LIKE '%".$busca."%' 
+							OR P.subcategoria LIKE '%".$busca."%'
+						   )
+					";
 			$result = parent::Execute($Sql);
 			$num_rows = parent::Linha($result);
 			#Monta no Html a Listagem
