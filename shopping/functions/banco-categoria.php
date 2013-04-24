@@ -1,7 +1,7 @@
 <?php
 	class bancocategoria extends banco{
 
-		function ListaCategoria($Auxilio, $categoria){
+		function ListaCategoria($Auxilio, $where){
 			$Banco_Vazio = "Banco esta Vazio";
 			#Query Busca Produtos
 			$Sql = "SELECT P . * , L.nome AS nome_loja, S.nome AS nome_sub, C.nome AS nome_cat
@@ -9,7 +9,7 @@
 					INNER JOIN s_lojas L ON P.idloja = L.idloja
 					INNER JOIN fixo_subcategorias S ON P.idsubcategoria = S.idsubcategoria
 					INNER JOIN fixo_categorias C ON S.idcategoria = C.idcategoria
-					WHERE S.idcategoria = ".$categoria." 
+					".$where." 
 					ORDER BY P.nome
 					";
 			$result = parent::Execute($Sql);

@@ -10,10 +10,19 @@
 	#monta o auxilio para listar os produtos
 	$Auxilio = $banco->CarregaHtml('itens/lista-produto-itens');
 	
-	#Coloca na variável a categoria que quer buscar
-	$categoria = $this->PaginaAux[0];
+	if($this->PaginaAux[0]){
+		#Coloca na variável a categoria que quer buscar
+		$categoria = $this->PaginaAux[0];
+		$where = "WHERE S.idcategoria = " . $categoria;
+	}
+	if($this->PaginaAux[1]){
+		$categoria = $this->PaginaAux[0];
+		$subcategoria = $this->PaginaAux[1];
+		$where = "WHERE P.idsubcategoria = " . $subcategoria . 
+				 " AND S.idcategoria = " . $categoria;
+	}
 	
-	$Categoria = $banco->ListaCategoria($Auxilio, $categoria);
+	$Categoria = $banco->ListaCategoria($Auxilio, $where);
 	
 	#Imprime Valores
 	$Conteudo = $banco->CarregaHtml('categoria');
