@@ -248,10 +248,10 @@
 			if($this->PaginaAux[0]){
 				$navegacao = ucfirst($this->Pagina);
 				$navegacao .= " >> ";
-				$navegacao .= '<a href="'.UrlPadrao.'/categoria/'.$this->PaginaAux[0].'">'.$this->PaginaAux[0].'</a>';
+				$navegacao .= '<a href="'.UrlPadrao.'/'.$this->Pagina.'/'.$this->PaginaAux[0].'">'.$this->PaginaAux[0].'</a>';
 				if($this->PaginaAux[1]){
 					$navegacao .= " >> ";
-					$navegacao .= '<a href="'.UrlPadrao.'/categoria/'.$this->PaginaAux[0].'/'.$this->PaginaAux[1].'">'.$this->PaginaAux[1].'</a>';
+					$navegacao .= '<a href="'.UrlPadrao.'/'.$this->Pagina.'/'.$this->PaginaAux[0].'/'.$this->PaginaAux[1].'">'.$this->PaginaAux[1].'</a>';
 				}
 				return $navegacao;
 			}
