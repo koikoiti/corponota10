@@ -1,7 +1,7 @@
 <?php
 	class bancoloja extends banco{
 		
-	function ListaProdutosLoja($Auxilio,$idloja){
+	function ListaProdutosLoja($Auxilio,$nomeLoja){
 			$Banco_Vazio = "Banco esta Vazio";
 			#Query Busca Docs
 			$Sql = "SELECT P . * , L.nome AS nome_loja, S.nome AS nome_sub, C.nome AS nome_cat
@@ -9,7 +9,7 @@
 					INNER JOIN s_lojas L ON P.idloja = L.idloja
 					INNER JOIN fixo_subcategorias S ON P.idsubcategoria = S.idsubcategoria
 					INNER JOIN fixo_categorias C ON S.idcategoria = C.idcategoria
-					where P.idloja = '".$idloja."'
+					where L.nome = '".$nomeLoja."'
 					";
 			$result = parent::Execute($Sql);
 			$num_rows = parent::Linha($result);
