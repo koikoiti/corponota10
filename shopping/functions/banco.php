@@ -245,10 +245,17 @@
 		
 		#
 		function Navegacao(){
-			$navegacao = $this->Pagina;
-			$navegacao .= " >> ";
-			$navegacao .= '<a href="#">'.$this->PaginaAux[0].'</a>';
-			return $navegacao;
+			if($this->PaginaAux[0]){
+				$navegacao = ucfirst($this->Pagina);
+				$navegacao .= " >> ";
+				$navegacao .= '<a href="'.UrlPadrao.'/categoria/'.$this->PaginaAux[0].'">'.$this->PaginaAux[0].'</a>';
+				if($this->PaginaAux[1]){
+					$navegacao .= " >> ";
+					$navegacao .= '<a href="'.UrlPadrao.'/categoria/'.$this->PaginaAux[0].'/'.$this->PaginaAux[1].'">'.$this->PaginaAux[1].'</a>';
+				}
+				return $navegacao;
+			}
+			
 		}
 	}
 ?>

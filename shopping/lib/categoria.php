@@ -13,13 +13,13 @@
 	if($this->PaginaAux[0]){
 		#Coloca na variável a categoria que quer buscar
 		$categoria = $this->PaginaAux[0];
-		$where = "WHERE S.idcategoria = " . $categoria;
+		$where = "WHERE C.nome = '" . $categoria."'";
 	}
 	if($this->PaginaAux[1]){
 		$categoria = $this->PaginaAux[0];
 		$subcategoria = $this->PaginaAux[1];
-		$where = "WHERE P.idsubcategoria = " . $subcategoria . 
-				 " AND S.idcategoria = " . $categoria;
+		$where = "WHERE S.nome = '" . $subcategoria."'".
+				 " AND C.nome = '" . $categoria."'";
 	}
 	
 	$Categoria = $banco->ListaCategoria($Auxilio, $where);
