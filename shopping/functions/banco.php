@@ -242,5 +242,13 @@
 			}
 			return $var;
 		}
+		
+		#
+		function Navegacao(){
+			$navegacao = $this->Pagina;
+			$navegacao .= " >> ";
+			$navegacao .= '<a href="#">'.$this->PaginaAux[0].'</a>';
+			return $navegacao;
+		}
 	}
 ?>

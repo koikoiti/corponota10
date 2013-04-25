@@ -25,11 +25,13 @@
 			}else{
 					$Conteudo = $banco->ChamaPhp('inicio');
 			}
-		
+			
+			$navegacao = $banco->Navegacao();
 			#Carrega Pagina Requisitada
 			$SaidaHtml = $banco->CarregaHtml('modelo');
 			$SaidaHtml = str_replace('<%CONTEUDO%>',$Conteudo,$SaidaHtml);
 			$SaidaHtml = str_replace('<%URLPADRAO%>',UrlPadrao,$SaidaHtml);
+			$SaidaHtml = str_replace('<%NAVEGACAO%>',$navegacao,$SaidaHtml);
 
 			#Imprime tela
 			echo $SaidaHtml;
