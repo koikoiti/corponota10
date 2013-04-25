@@ -26,12 +26,16 @@
 					$Conteudo = $banco->ChamaPhp('inicio');
 			}
 			
+			$Lateral01 = $banco->Lateral01();
+			
 			$navegacao = $banco->Navegacao();
 			#Carrega Pagina Requisitada
 			$SaidaHtml = $banco->CarregaHtml('modelo');
 			$SaidaHtml = str_replace('<%CONTEUDO%>',$Conteudo,$SaidaHtml);
 			$SaidaHtml = str_replace('<%URLPADRAO%>',UrlPadrao,$SaidaHtml);
 			$SaidaHtml = str_replace('<%NAVEGACAO%>',$navegacao,$SaidaHtml);
+			$SaidaHtml = str_replace('<%LATERAL01%>',$Lateral01,$SaidaHtml);
+			$SaidaHtml = str_replace('<%TITULOLATERAL01%>','Lojas',$SaidaHtml);
 
 			#Imprime tela
 			echo $SaidaHtml;

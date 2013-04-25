@@ -257,5 +257,28 @@
 			}
 			
 		}
+		
+		#Função da Lateral01
+		function Lateral01(){
+			$Auxilio = $this->CarregaHtml('itens/lista-loja-itens');
+			$Banco_Vazio = "Banco esta Vazio";
+			#Query Busca Docs
+			$Sql = "Select * from s_lojas";
+			$result = $this->Execute($Sql);
+			$num_rows = $this->Linha($result);
+			#Monta no Html a Listagem
+			if ($num_rows){
+				while( $rs = mysql_fetch_array($result , MYSQL_ASSOC) )
+				{
+					$Linha = $Auxilio;
+					$Linha = str_replace('<%ID%>',$rs['idloja'],$Linha);
+					$Linha = str_replace('<%NOME%>',$rs['nome'],$Linha);
+					$Lojas .= $Linha;
+				}
+			}else{
+			
+			}
+			return $Lojas;
+		}
 	}
 ?>
