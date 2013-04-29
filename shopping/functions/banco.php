@@ -280,5 +280,68 @@
 			}
 			return $Lojas;
 		}
+		
+		#Função da Lateral 02
+		function Lateral02(){
+			$pesquisar = '<ul class="widget-container"><li id="search-2" class="widget widget_search"><h3 class="widgettitle">Pesquisar no Shopping</h3> 
+							<div id="search" title="Type and hit enter">
+							    <div onclick="location.href=\''.UrlPadrao.'/pesquisar/\' + document.getElementById(\'s\').value" style="margin-top: -2px; margin-right: -20px;  height: 20px; width: 20px; float: right;"></div>
+						    	<form method="post" name="form1" id="searchform" action="javascript:location.href=\''.UrlPadrao.'/pesquisar/\' + document.getElementById(\'s\').value">
+						        	<input type="text" value="Pesquisar no Shopping" name="pesquisar" id="s" onblur="if (this.value == \'\')  {this.value = \'Pesquisar no Shopping\';}" onfocus="if (this.value == \'Pesquisar no Shopping\') {this.value = \'\';}">
+						    	</form>
+							</div><!-- #search --></li></ul>';
+			return $pesquisar;
+		}
+		
+		#Função do Slider
+		function Slider(){
+			$slider = '<div class="fp-slider clearfix">    
+					    <div class="fp-slides-container clearfix">					        
+					        <div class="fp-slides" style="overflow: hidden;">	        
+					                    <div class="fp-slides-items" style="position: absolute; top: 0px; left: 0px; display: block; z-index: 3; opacity: 1; width: 615px; height: 300px;">
+					                        <div class="fp-thumbnail">
+					                            <a href="https://www.facebook.com/CorpoNota10?ref=hl" title=""><img src="http://www.corponota10.com.br/wp-content/themes/NewsLayer/images/face like.jpg"></a>                        </div>
+                                                   <div class="fp-content-wrap">
+					                                    <div class="fp-content">
+				                                            <h3 class="fp-title">
+				                                                <a href="https://www.facebook.com/CorpoNota10?ref=hl" title=""></a></h3>	                                                                                
+																<p>
+																<a class="fp-more" href="https://www.facebook.com/CorpoNota10?ref=hl">More »</a>
+					                                            </p>
+														</div>
+					                                </div>
+					                    	</div>
+					                    <div class="fp-slides-items" style="position: absolute; top: 0px; left: -615px; display: none; z-index: 2; opacity: 1; width: 615px; height: 300px;">
+					                        <div class="fp-thumbnail">
+					                            <a href="http://www.corponota10.com.br/?cat=1" title=""><img src="http://www.corponota10.com.br/wp-content/themes/NewsLayer/images/hiperj.jpg"></a>
+											</div>
+										<div class="fp-content-wrap">
+					                    	<div class="fp-content">
+					                        	<h3 class="fp-title">
+					                            	<a href="http://www.corponota10.com.br/?cat=1" title=""></a></h3>
+													<p>
+													<a class="fp-more" href="http://www.corponota10.com.br/?cat=1">More »</a>
+													</p>
+											</div>
+					                   	</div>
+					              </div>          
+					        </div>
+						<div class="fp-prev-next-wrap">
+							<div class="fp-prev-next">
+					        	<a href="#fp-next" class="fp-next"></a>
+					            <a href="#fp-prev" class="fp-prev"></a>
+					        </div>
+					    </div>
+					    <div class="fp-nav">
+					    	<span class="fp-pager">
+								&nbsp;
+								<a href="#" class="activeSlide">1</a>
+								<a href="#" class="">2</a>
+							</span>
+					    </div>  
+					</div>
+				</div>';
+			return $slider;
+		}
 	}
 ?>

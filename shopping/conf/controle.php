@@ -27,14 +27,18 @@
 			}
 			
 			$Lateral01 = $banco->Lateral01();
-			
+			$Lateral02 = $banco->Lateral02();
+			$slider = $banco->Slider();
 			$navegacao = $banco->Navegacao();
+			
 			#Carrega Pagina Requisitada
 			$SaidaHtml = $banco->CarregaHtml('modelo');
 			$SaidaHtml = str_replace('<%CONTEUDO%>',$Conteudo,$SaidaHtml);
 			$SaidaHtml = str_replace('<%URLPADRAO%>',UrlPadrao,$SaidaHtml);
 			$SaidaHtml = str_replace('<%NAVEGACAO%>',$navegacao,$SaidaHtml);
 			$SaidaHtml = str_replace('<%LATERAL01%>',$Lateral01,$SaidaHtml);
+			$SaidaHtml = str_replace('<%LATERAL02%>',$Lateral02,$SaidaHtml);
+			$SaidaHtml = str_replace('<%SLIDER%>',$slider,$SaidaHtml);
 			$SaidaHtml = str_replace('<%TITULOLATERAL01%>','Lojas',$SaidaHtml);
 
 			#Imprime tela

@@ -52,7 +52,7 @@ a:focus {
 -------------------------------------------------------------- */
 
 #container {
-	width: 960px;
+	width: 1024px;
 	margin: 15px auto  0 auto;
     background: url(images/container-bg.png) left top repeat-x;
 }
@@ -498,7 +498,7 @@ a:focus {
 .fp-slides-container {}
 
 .fp-slides, .fp-thumbnail, .fp-prev-next, .fp-nav {
-    width: 615px;
+    width: 680px;
 }
 
 .fp-slides, .fp-thumbnail {
