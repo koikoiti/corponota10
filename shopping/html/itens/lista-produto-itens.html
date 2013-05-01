@@ -4,5 +4,20 @@
 <center><%NOME%></center> <p>
 <center><%PRECO%></center> <p>
 <center><%NOMELOJA%></center> <p>
-<center><div class="div-comprar" onclick="location.href='<%LINK%>'">Comprar</div></center>
+<center><div class="div-comprar" onclick="contaclick('<%LINK%>','<%ID%>');">Comprar</div></center>
 </div>
+
+<script> 
+function contaclick(link,idproduto){
+	jQuery(document).ready(function() {
+ 		jQuery.post("http://localhost/corponota10/shopping/lib/ajax/salvaclick.php",
+ 				{link:link , idproduto:idproduto} , 
+ 				function (dados){
+					location.href=link;
+ 	 				}
+		);
+  	});
+}
+
+
+</script>
