@@ -10,6 +10,5 @@
 			VALUES ('".$hora."' , '".$_SERVER['REMOTE_ADDR']."' , '".$_POST['link']."' , '".$_POST['idproduto']."' )
 			";
 	$result = mysql_query($sql);
-	
 	echo true;
 ?>

@@ -1177,6 +1177,7 @@ a.tweets-widget-time:hover {
 	float:left;
 	background-color: #ffffff;
 	border:1px solid #EFEFEF;
+	
 }
 
 .loja-inicio{
@@ -1203,6 +1204,7 @@ a.tweets-widget-time:hover {
 	color: #27A9D4;
 	background-color: #FE8323;
 	clear: both;
+	cursor: pointer;
 }
 /* =COMMENTS
 -------------------------------------------------------------- */
