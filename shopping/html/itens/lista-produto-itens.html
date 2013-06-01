@@ -7,17 +7,16 @@
 <center><div class="div-comprar" onclick="contaclick('<%LINK%>','<%ID%>');">Comprar</div></center>
 </div>
 
+<!-- MUDAR O LOCALHOST QUANDO UPAR -->
 <script> 
 function contaclick(link,idproduto){
 	jQuery(document).ready(function() {
  		jQuery.post("http://localhost/corponota10/shopping/lib/ajax/salvaclick.php",
- 				{link:link , idproduto:idproduto} , 
- 				function (dados){
-					location.href=link;
- 	 				}
+ 				{link:link , idproduto:idproduto}, 
+ 				function(dados){
+ 					window.open("http://localhost/corponota10/shopping/redireciona/" + idproduto);
+ 				}
 		);
   	});
 }
-
-
 </script>

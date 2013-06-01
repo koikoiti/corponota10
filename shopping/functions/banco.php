@@ -343,5 +343,12 @@
 				</div>';
 			return $slider;
 		}
+	
+		function Redireciona($link){
+			echo "<script>
+			window.open(".$link.");
+		  </script>
+		 ";
+		}
 	}
 ?>
