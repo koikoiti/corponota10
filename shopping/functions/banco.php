@@ -258,6 +258,41 @@
 			
 		}
 		
+		#Função que monta o menu com subcategorias
+		function Subcategorias(){
+			if($this->Pagina == "categoria"){
+				$categoria = $this->PaginaAux[0];
+				$subcategorias = '<div class="menu-secondary-container">
+									<ul class="menus menu-secondary sf-js-enabled">';
+				
+				$SqlA = "SELECT idcategoria FROM fixo_categorias
+						WHERE nome = '".$categoria."'
+						";
+				$resultA = $this->Execute($SqlA);
+				$rsA = mysql_fetch_array($resultA, MYSQL_ASSOC);
+				
+				$id = $rsA['idcategoria'];
+				
+				$Sql = "SELECT nome FROM fixo_subcategorias
+						WHERE idcategoria = ".$id."
+						";
+				$result = $this->Execute($Sql);
+				$num_rows = $this->Linha($result);
+				#Monta no Html a Listagem
+				if ($num_rows){
+					while( $rs = mysql_fetch_array($result , MYSQL_ASSOC) )
+					{
+						$subcategorias .= '<li class="cat-item cat-item-1"><a href="http://localhost/corponota10/shopping/subcategoria/'. $rs["nome"] .'">'. str_replace("-", " ", $rs["nome"]) .'</a></li>';
+					}
+				}
+				
+				$subcategorias .= "</ul></div>";
+				return $subcategorias;
+			}else{
+				return "";
+			}
+		}
+		
 		#Função da Lateral01
 		function Lateral01(){
 			$Auxilio = $this->CarregaHtml('itens/lista-loja-itens');
