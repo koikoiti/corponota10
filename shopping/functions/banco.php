@@ -308,6 +308,7 @@
 					$Linha = $Auxilio;
 					$Linha = str_replace('<%ID%>',$rs['idloja'],$Linha);
 					$Linha = str_replace('<%NOME%>',$rs['nome'],$Linha);
+					$Linha = str_replace('<%URLPADRAO%>',UrlPadrao,$Linha);
 					$Lojas .= $Linha;
 				}
 			}else{
