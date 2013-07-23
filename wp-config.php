@@ -26,6 +26,7 @@ define('DB_PASSWORD', 's1stem@');
 
 /** nome do host do MySQL */
 //define('DB_HOST', 'localhost');
+//define('DB_HOST', 'mysql.hostinger.com.br');
 define('DB_HOST', '192.168.0.10');
 
 /** Conjunto de caracteres do banco de dados a ser usado na criação das tabelas. */
