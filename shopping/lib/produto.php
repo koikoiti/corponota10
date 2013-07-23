@@ -1,6 +1,7 @@
 <?php
 	#Declara Variaveis
-	
+	echo teste;
+	die;
 	#Include nas funcoes do documento
 	include('functions/banco-produto.php');
 	
