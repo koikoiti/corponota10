@@ -40,6 +40,7 @@
 				$SaidaHtml = $banco->CarregaHtml('modelo');
 				$SaidaHtml = str_replace('<%CONTEUDO%>',$Conteudo,$SaidaHtml);
 				$SaidaHtml = str_replace('<%URLPADRAO%>',UrlPadrao,$SaidaHtml);
+				$SaidaHtml = str_replace('<%URLMODELO%>',UrlModelo,$SaidaHtml);
 				$SaidaHtml = str_replace('<%NAVEGACAO%>',$navegacao,$SaidaHtml);
 				$SaidaHtml = str_replace('<%SUBCATEGORIAS%>',$subcategorias,$SaidaHtml);
 				$SaidaHtml = str_replace('<%LATERAL01%>',$Lateral01,$SaidaHtml);

@@ -331,52 +331,46 @@
 		
 		#Função do Slider
 		function Slider(){
-			$slider = '<div class="fp-slider clearfix">    
-					    <div class="fp-slides-container clearfix">					        
-					        <div class="fp-slides" style="overflow: hidden;">	        
-					                    <div class="fp-slides-items" style="position: absolute; top: 0px; left: 0px; display: block; z-index: 3; opacity: 1; width: 615px; height: 300px;">
-					                        <div class="fp-thumbnail">
-					                            <a href="https://www.facebook.com/CorpoNota10?ref=hl" title=""><img src="http://www.corponota10.com.br/wp-content/themes/NewsLayer/images/face like.jpg"></a>                        </div>
-                                                   <div class="fp-content-wrap">
-					                                    <div class="fp-content">
-				                                            <h3 class="fp-title">
-				                                                <a href="https://www.facebook.com/CorpoNota10?ref=hl" title=""></a></h3>	                                                                                
-																<p>
-																<a class="fp-more" href="https://www.facebook.com/CorpoNota10?ref=hl">More »</a>
-					                                            </p>
-														</div>
-					                                </div>
-					                    	</div>
-					                    <div class="fp-slides-items" style="position: absolute; top: 0px; left: -615px; display: none; z-index: 2; opacity: 1; width: 615px; height: 300px;">
-					                        <div class="fp-thumbnail">
-					                            <a href="http://www.corponota10.com.br/?cat=1" title=""><img src="http://www.corponota10.com.br/wp-content/themes/NewsLayer/images/hiperj.jpg"></a>
-											</div>
-										<div class="fp-content-wrap">
-					                    	<div class="fp-content">
-					                        	<h3 class="fp-title">
-					                            	<a href="http://www.corponota10.com.br/?cat=1" title=""></a></h3>
-													<p>
-													<a class="fp-more" href="http://www.corponota10.com.br/?cat=1">More »</a>
-													</p>
-											</div>
-					                   	</div>
-					              </div>          
+			$slider = '
+			<div class="fp-slider clearfix">    
+				<div class="fp-slides-container clearfix">					        
+					<div class="fp-slides" style="overflow: hidden;">	        
+						<div class="fp-slides-items" style="position: absolute; top: 0px; left: 0px; display: block; z-index: 3; opacity: 1; width: 615px; height: 300px;">
+							<!-- Início Slide -->
+							<div class="fp-thumbnail"><a href="https://www.facebook.com/CorpoNota10?ref=hl" target="_blank" title=""><img src="http://www.corponota10.com.br/wp-content/themes/NewsLayer/images/face.jpg"></a></div>
+								<div class="fp-content-wrap">
+									<div class="fp-content">
+										<h3 class="fp-title"><a href="https://www.facebook.com/CorpoNota10?ref=hl" title=""></a></h3>
+										<p><a class="fp-more" href="https://www.facebook.com/CorpoNota10?ref=hl">More »</a></p>
+									</div>
+								</div>
 					        </div>
-						<div class="fp-prev-next-wrap">
-							<div class="fp-prev-next">
-					        	<a href="#fp-next" class="fp-next"></a>
-					            <a href="#fp-prev" class="fp-prev"></a>
+							<!-- Fim Slide -->
+							<!-- Início Slide 2 -->
+					        <div class="fp-slides-items" style="position: absolute; top: 0px; left: -615px; display: none; z-index: 2; opacity: 1; width: 615px; height: 300px;">
+					            <div class="fp-thumbnail"><a href="http://www.corponota10.com.br/?cat=1" title=""><img src="http://www.corponota10.com.br/wp-content/themes/NewsLayer/images/hiperj.jpg"></a></div>
+									<div class="fp-content-wrap">
+										<div class="fp-content">
+					                        <h3 class="fp-title"><a href="http://www.corponota10.com.br/?cat=1" title=""></a></h3>
+											<p><a class="fp-more" href="http://www.corponota10.com.br/?cat=1">More »</a></p>
+										</div>
+					                </div>
+					            </div>          
 					        </div>
-					    </div>
-					    <div class="fp-nav">
-					    	<span class="fp-pager">
-								&nbsp;
-								<a href="#" class="activeSlide">1</a>
-								<a href="#" class="">2</a>
-							</span>
-					    </div>  
+							<!-- Fim Slide 2 -->
+							<!-- Flechinhas -->
+							<div class="fp-prev-next-wrap">
+								<div class="fp-prev-next">
+									<a href="#fp-next" class="fp-next"></a>
+									<a href="#fp-prev" class="fp-prev"></a>
+								</div>
+							</div>
+							<div class="fp-nav">
+								<span class="fp-pager">&nbsp;</span>
+							</div>
+						</div>
 					</div>
-				</div>';
+			';
 			return $slider;
 		}
 	
