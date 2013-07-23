@@ -8,7 +8,7 @@
 	
 	#Quando usar localhost
 	define('UrlPadrao' , "http://localhost/corponota10/shopping");
-	define('UrlModelo', "http://localhost/corponota10/");
+	define('UrlModelo', "http://localhost/corponota10");
 	
 	#Definições do Banco de Dados
 	define('DB_Host' , "192.168.0.10");

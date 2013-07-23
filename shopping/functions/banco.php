@@ -155,6 +155,8 @@
 			$Sql = "Select idpagina from s_paginas where nome='".$nome."'";	
 			$result = $this->Execute($Sql);
 			$num_rows = $this->Linha($result);
+			echo $Sql;
+			die;
 			return $num_rows;
 		}
 		
@@ -282,7 +284,7 @@
 				if ($num_rows){
 					while( $rs = mysql_fetch_array($result , MYSQL_ASSOC) )
 					{
-						$subcategorias .= '<li class="cat-item cat-item-1"><a href="http://localhost/corponota10/shopping/categoria/'. $categoria . '/'. $rs["nome"] .'">'. str_replace("-", " ", $rs["nome"]) .'</a></li>';
+						$subcategorias .= '<li class="cat-item cat-item-1"><a href="'.UrlPadrao.'/categoria/'. $categoria . '/'. $rs["nome"] .'">'. str_replace("-", " ", $rs["nome"]) .'</a></li>';
 					}
 				}
 				
