@@ -32,7 +32,6 @@
 			$navegacao = $banco->Navegacao();
 			$subcategorias = $banco->Subcategorias();
 			
-			echo $banco->Pagina;
 			#Carrega Pagina Requisitada
 			if($banco->Pagina == "redireciona"){
 				$SaidaHtml = $banco->CarregaHtml('redireciona-outer');
