@@ -7,11 +7,16 @@
 	define('UrlPadrao' , "http://localhost/corponota10/shopping");
 	define('UrlModelo', "http://localhost/corponota10");
 	
-	#Definições do Banco de Dados
-	define('DB_Host' , "192.168.0.10");
-	//define('DB_Host' , "localhost");
+	#Definições do Banco de Dados Desenvolvimento (DB4Free)	
+	define('DB_Host' , "db4free.net");
+	define('DB_Database' , "cn10");
+	define('DB_User' , "cn10");
+	define('DB_Pass' , "s1stem@");
+	/*
+	#Definições do Banco de Dados WEB
+	define('DB_Host' , "mysql.hostinger.com.br");
 	define('DB_Database' , "u528725906_cn10");
 	define('DB_User' , "u528725906_cn10");
 	define('DB_Pass' , "s1stem@");
-	
+	*/
 ?>

@@ -15,19 +15,28 @@
  */
 
 // ** Configurações do MySQL - Você pode pegar essas informações com o serviço de hospedagem ** //
-/** O nome do banco de dados do WordPress */
+#Configura��es WEB
+/*
+#O nome do banco de dados do WordPress
 define('DB_NAME', 'u528725906_cn10');
-
-/** Usuário do banco de dados MySQL */
+#Usuário do banco de dados MySQL
 define('DB_USER', 'u528725906_cn10');
-
-/** Senha do banco de dados MySQL */
+#Senha do banco de dados MySQL
 define('DB_PASSWORD', 's1stem@');
+# nome do host do MySQL
+define('DB_HOST', 'mysql.hostinger.com.br');
+*/
 
-/** nome do host do MySQL */
-//define('DB_HOST', 'localhost');
-//define('DB_HOST', 'mysql.hostinger.com.br');
-define('DB_HOST', '192.168.0.10');
+#Configura��es Desenvolvimento (DB4Free)
+#O nome do banco de dados do WordPress
+define('DB_NAME', 'cn10');
+#Usuário do banco de dados MySQL
+define('DB_USER', 'cn10');
+#Senha do banco de dados MySQL
+define('DB_PASSWORD', 's1stem@');
+# nome do host do MySQL
+define('DB_HOST', 'db4free.net');
+
 
 /** Conjunto de caracteres do banco de dados a ser usado na criação das tabelas. */
 define('DB_CHARSET', 'utf8');
