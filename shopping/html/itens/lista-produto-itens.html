@@ -14,7 +14,7 @@ function contaclick(link,idproduto){
  		jQuery.post("http://localhost/corponota10/shopping/lib/ajax/salvaclick.php",
  				{link:link , idproduto:idproduto}, 
  				function(dados){
- 					window.open('http://localhost/corponota10/shopping/redireciona/' + idproduto, '_blank');
+ 					window.location.href='http://localhost/corponota10/shopping/redireciona/' + idproduto;
  				}
 		);
   	});

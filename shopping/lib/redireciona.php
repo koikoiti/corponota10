@@ -11,7 +11,6 @@
 	$link = $banco->BuscaLink($idproduto);
 	
 	#Imprime Valores
-	$Conteudo = $banco->CarregaHtml('redireciona-inner');
-	$Conteudo = str_replace('<%URLPADRAO%>',UrlPadrao,$Conteudo);
-	$Conteudo = str_replace('<%URL%>',$link,$Conteudo);
+	$Conteudo = '<iframe style="display:block;margin: 0 auto;" height="100%" width="1024" src="<%LINKOUT%>"></iframe>';
+	$Conteudo = str_replace('<%LINKOUT%>',$link,$Conteudo);
 ?>

@@ -34,7 +34,7 @@
 			
 			#Carrega Pagina Requisitada
 			if($banco->Pagina == "redireciona"){
-				$SaidaHtml = $banco->CarregaHtml('redireciona-outer');
+				$SaidaHtml = $banco->CarregaHtml('redireciona');
 				$SaidaHtml = str_replace('<%CONTEUDO%>',$Conteudo,$SaidaHtml);
 			}else{
 				$SaidaHtml = $banco->CarregaHtml('modelo');
