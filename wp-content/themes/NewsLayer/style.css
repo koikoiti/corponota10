@@ -1172,6 +1172,14 @@ a.tweets-widget-time:hover {
 	margin-right: 50px;
 	cursor: pointer;
 }
+#readmore-personalizado-unico{
+	margin-right: 0px;
+	cursor: pointer;
+}
+.produto-inicio-unico{
+	width: 100%;
+	background-color: red;
+}
 
 .produto-inicio{
 	width: 680px;
