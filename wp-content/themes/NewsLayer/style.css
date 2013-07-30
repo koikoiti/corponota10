@@ -1166,6 +1166,10 @@ a.tweets-widget-time:hover {
 
 /* = PRODUTOS
 -------------------------------------------------------------- */
+#readmore-personalizado{
+	margin-right: 50px;
+}
+
 .produto-inicio{
 	width: 680px;
 	margin-left: 3px;
