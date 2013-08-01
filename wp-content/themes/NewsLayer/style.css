@@ -1164,6 +1164,47 @@ a.tweets-widget-time:hover {
     padding: 0;
 }
 
+/* = PAGINACAO
+-------------------------------------------------------------- */
+#paginacao {
+	padding: 3px;
+}
+#paginacao ul {
+	list-style-type: none;
+}
+#paginacao li {
+	float: left;
+	display: inline;
+	margin: 0 5px 0 0;
+	display: block;
+}
+#paginacao li a {
+	color: #555555;
+	padding: 4px;
+	border: 1px solid #ddd;
+	text-decoration: none;
+	float: left;
+}
+#paginacao li a:hover {
+	color: #555555;
+	background: #FF8F0A;
+	border: 1px solid #0298CA;
+}
+#paginacao li.nolink {
+	color: #CCC;
+	border: 1px solid #F3F3F3;
+	padding: 4px;
+}
+#paginacao li.current {
+	color: #FFF;
+	border: 1px solid #0298CA;
+	padding: 0px;
+	background: #FFF;
+	pointer-events: none;
+   	cursor: default;
+}
+
+
 /* = PRODUTOS
 -------------------------------------------------------------- */
 
