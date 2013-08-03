@@ -380,5 +380,101 @@
 		  </script>
 		 ";
 		}
+		
+		#Função que retorna a página
+		function RetornaPagina($PaginaAux){
+			$casa = array_search("pg", $PaginaAux);
+			if($casa){
+				$pagina = $PaginaAux[($casa+1)];
+			}else{
+				$pagina = 1;
+			}
+			return $pagina;
+		}
+		
+		#Função que retorna o total de registros do parâmetro passado
+		function RetornaTotal($PaginaAux, $pagina){
+			switch($pagina){
+				case "pesquisar":
+					$Sql = "SELECT P . *
+							FROM s_produtos P
+							INNER JOIN fixo_subcategorias S ON P.idsubcategoria = S.idsubcategoria
+							INNER JOIN fixo_categorias C ON S.idcategoria = C.idcategoria
+							WHERE (P.nome LIKE '%".$PaginaAux[0]."%' 
+									OR C.nome LIKE '%".$PaginaAux[0]."%' 
+									OR S.nome LIKE '%".$PaginaAux[0]."%'
+								   )
+							";
+					$result = $this->Execute($Sql);
+					$num_rows = $this->Linha($result);
+					$total = ceil($num_rows/Limite);
+					break;
+				case "categoria":
+					$SqlSub = "SELECT *
+							FROM fixo_subcategorias
+							WHERE nome = '".$PaginaAux[1]."'
+							";
+					$resultSub = $this->Execute($SqlSub);
+					$num_rowsSub = $this->Linha($resultSub);
+					if($num_rowsSub){
+						$Sql = "SELECT P . *
+								FROM s_produtos P
+								INNER JOIN fixo_subcategorias S ON P.idsubcategoria = S.idsubcategoria
+								WHERE S.nome = '".$PaginaAux[1]."'
+								";
+						$result = $this->Execute($Sql);
+						$num_rows = $this->Linha($result);
+						$total = ceil($num_rows/Limite);
+					}else{
+						$Sql = "SELECT P . *
+								FROM s_produtos P
+								INNER JOIN fixo_subcategorias S ON P.idsubcategoria = S.idsubcategoria
+								INNER JOIN fixo_categorias C ON S.idcategoria = C.idcategoria
+								WHERE C.nome = '".$PaginaAux[0]."'
+								";
+						$result = $this->Execute($Sql);
+						$num_rows = $this->Linha($result);
+						$total = ceil($num_rows/Limite);
+					}
+					break;
+				case "loja":
+					break;
+			}
+			return $total;
+		}
+		
+		#Função que monta a Paginação da categoria
+		function MontaPaginacao($numPagina, $PaginaAux, $pagina){
+			$total = $this->RetornaTotal($PaginaAux, $pagina);
+
+			$Auxilio = $this->CarregaHtml('paginacao');
+			//FAZER SUÍTE PAGINAÇÃO
+			if($pagina == 1){
+				$anterior = "<li class='nolink'><< Anterior </li>";
+			}else{
+				$paginaAnterior = $pagina-1;
+				$anterior = "<li><a href='".UrlPadrao."/categoria/".$categoria."/pg/".$paginaAnterior."'><< Anterior </a></li>";
+			}
+				
+			for($i=1; $i<=$total; $i++){
+				if($i == $pagina){
+					$paginacao .= "<li class='current'><a href='".UrlPadrao."/categoria/".$categoria."/pg/".$i."''>".$i."</a></li>";
+				}else{
+					$paginacao .= "<li><a href='".UrlPadrao."/categoria/".$categoria."/pg/".$i."''>".$i."</a></li>";
+				}
+			}
+				
+			if($pagina == $total){
+				$proxima = "<li class='nolink'>Próxima >> </li>";
+			}else{
+				$paginaProxima = $pagina+1;
+				$proxima = "<li><a href='".UrlPadrao."/categoria/".$categoria."/pg/".$paginaProxima."'>Próxima >> </a></li>";
+			}
+				
+			$Auxilio = str_replace('<%ANTERIOR%>',$anterior,$Auxilio);
+			$Auxilio = str_replace('<%PAGINACAO%>',$paginacao,$Auxilio);
+			$Auxilio = str_replace('<%PROXIMA%>',$proxima,$Auxilio);
+			return $Auxilio;
+		}
 	}
 ?>

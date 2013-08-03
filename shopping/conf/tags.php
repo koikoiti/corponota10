@@ -19,4 +19,7 @@
 	define('DB_User' , "u528725906_cn10");
 	define('DB_Pass' , "s1stem@");
 	*/
+	
+	#Limite de produtos paginação
+	define('Limite', 3);
 ?>

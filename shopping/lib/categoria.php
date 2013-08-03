@@ -27,16 +27,15 @@
 	$Auxilio = $banco->CarregaHtml('itens/lista-produto-itens');
 	
 	#Pega a página
-	$pagina = $banco->PaginaCategoria($this->PaginaAux);
+	$numPagina = $banco->RetornaPagina($this->PaginaAux);
 	
 	#Lista a categoria
-	if($this->PaginaAux[1] == "pg" || isset($this->PaginaAux[1])){
+	if($this->PaginaAux[1] == "pg" || !isset($this->PaginaAux[1])){
 		$cat = $this->PaginaAux[0];
-		$Categoria = $banco->ListaCategoria($Auxilio, $pagina, $cat);
-		$Paginacao = $banco->MontaPaginacaoCat($pagina, $cat);
+		$Categoria = $banco->ListaCategoria($Auxilio, $numPagina, $cat);
 	}
 	
-	
+	$Paginacao = $banco->MontaPaginacao($numPagina, $this->PaginaAux, $this->Pagina);
 		
 	#Imprime Valores
 	$Conteudo = $banco->CarregaHtml('categoria');
