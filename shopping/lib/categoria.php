@@ -1,21 +1,4 @@
 <?php
-
-/*
- * 
- * 	$pagina = 1;
-		#Coloca na variável a categoria que quer buscar
-		$categoria = $this->PaginaAux[0];
-		$where = "WHERE C.nome = '" . $categoria."'";
-		if(strlen($this->PaginaAux[1]) < 6){
-			$pagina = strstr($this->PaginaAux[1], "pg-");
-			$pagina = str_replace("pg-", "", $pagina);
-		}else{
-			$subcategoria = $this->PaginaAux[1];
-			$where = "WHERE S.nome = '" . $subcategoria."'".
-					" AND C.nome = '" . $categoria."'";
-		}
-	}*/
-	#Declara Variaveis
 	
 	#Include nas funcoes do documento
 	include('functions/banco-categoria.php');
@@ -33,6 +16,9 @@
 	if($this->PaginaAux[1] == "pg" || !isset($this->PaginaAux[1])){
 		$cat = $this->PaginaAux[0];
 		$Categoria = $banco->ListaCategoria($Auxilio, $numPagina, $cat);
+	}else{
+		$sub = $this->PaginaAux[1];
+		$Categoria = $banco->ListaSubcategoria($Auxilio, $numPagina, $sub);
 	}
 	
 	$Paginacao = $banco->MontaPaginacao($numPagina, $this->PaginaAux, $this->Pagina);

@@ -22,4 +22,5 @@
 	
 	#Limite de produtos paginação
 	define('Limite', 3);
+	define('QtdPaginas', 3);
 ?>

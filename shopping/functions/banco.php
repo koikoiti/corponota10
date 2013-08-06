@@ -383,6 +383,7 @@
 		
 		#Função que retorna a página
 		function RetornaPagina($PaginaAux){
+			//Pega a casa que está a "pg"
 			$casa = array_search("pg", $PaginaAux);
 			if($casa){
 				$pagina = $PaginaAux[($casa+1)];
@@ -445,36 +446,81 @@
 		
 		#Função que monta a Paginação da categoria
 		function MontaPaginacao($numPagina, $PaginaAux, $pagina){
-			$total = $this->RetornaTotal($PaginaAux, $pagina);
-
-			$Auxilio = $this->CarregaHtml('paginacao');
-			//FAZER SUÍTE PAGINAÇÃO
-			if($pagina == 1){
-				$anterior = "<li class='nolink'><< Anterior </li>";
-			}else{
-				$paginaAnterior = $pagina-1;
-				$anterior = "<li><a href='".UrlPadrao."/categoria/".$categoria."/pg/".$paginaAnterior."'><< Anterior </a></li>";
-			}
-				
-			for($i=1; $i<=$total; $i++){
-				if($i == $pagina){
-					$paginacao .= "<li class='current'><a href='".UrlPadrao."/categoria/".$categoria."/pg/".$i."''>".$i."</a></li>";
-				}else{
-					$paginacao .= "<li><a href='".UrlPadrao."/categoria/".$categoria."/pg/".$i."''>".$i."</a></li>";
+			$totalPag = $this->RetornaTotal($PaginaAux, $pagina);
+			if($totalPag > 1){
+				$Auxilio = $this->CarregaHtml('paginacao');
+				//FAZER SUÍTE PAGINAÇÃO
+				switch($pagina){
+					case "pesquisar":
+						break;
+					case "categoria":
+						$SqlSub = "SELECT *
+								FROM fixo_subcategorias
+								WHERE nome = '".$PaginaAux[1]."'
+								";
+						$resultSub = $this->Execute($SqlSub);
+						$num_rowsSub = $this->Linha($resultSub);
+						if($num_rowsSub){
+							$url = "/" . $pagina . "/" . $PaginaAux[0] . "/" . $PaginaAux[1];
+						}else{
+							$url = "/" . $pagina . "/" . $PaginaAux[0];
+						}
+						break;
+					case "loja":
+						break;
 				}
-			}
 				
-			if($pagina == $total){
-				$proxima = "<li class='nolink'>Próxima >> </li>";
+				//Monta os links para o primeiro e anterior
+				if($numPagina == 1){
+					$anterior = "<li class='nolink'>< Anterior </li>";
+					$primeira = "<li class='nolink'><< Primeira </li>";
+				}else{
+					$paginaAnterior = $numPagina - 1;
+					$anterior = "<li><a href='".UrlPadrao.$url."/pg/".$paginaAnterior."'>< Anterior </a></li>";
+					$primeira = "<li><a href='".UrlPadrao.$url."/pg/1'><< Primeira </a></li>";
+				}
+				
+				//Monta paginação se estiver na última página
+				if($numPagina == $totalPag){
+					$paginacao .= "<li><a href='".UrlPadrao.$url."/pg/".($numPagina-2)."''>".($numPagina-2)."</a></li>";
+					$paginacao .= "<li><a href='".UrlPadrao.$url."/pg/".($numPagina-1)."''>".($numPagina-1)."</a></li>";
+					$paginacao .= "<li class='current'><a href='".UrlPadrao.$url."/pg/".$numPagina."''>".$numPagina."</a></li>";
+				//Monta paginação se estiver na penúltima página
+				}elseif($numPagina == ($totalPag-1)){
+					$paginacao .= "<li><a href='".UrlPadrao.$url."/pg/".($numPagina-1)."''>".($numPagina-1)."</a></li>";
+					$paginacao .= "<li class='current'><a href='".UrlPadrao.$url."/pg/".$numPagina."''>".$numPagina."</a></li>";
+					$paginacao .= "<li><a href='".UrlPadrao.$url."/pg/".$totalPag."''>".$totalPag."</a></li>";
+				}else{
+					//Monta a paginação do meio
+					$PagAte = $numPagina + QtdPaginas;
+					for($i = $numPagina; $i < $PagAte ; $i++){
+						if($i == $numPagina){
+							$paginacao .= "<li class='current'><a href='".UrlPadrao.$url."/pg/".$i."''>".$i."</a></li>";
+						}else{
+							$paginacao .= "<li><a href='".UrlPadrao.$url."/pg/".$i."''>".$i."</a></li>";
+						}
+					}
+				}
+				
+				//Monta os links para o último e próximo
+				if($numPagina == $totalPag){
+					$proxima = "<li class='nolink'>Próxima > </li>";
+					$ultima = "<li class='nolink'>Última >> </li>";
+				}else{
+					$paginaProxima = $numPagina + 1;
+					$proxima = "<li><a href='".UrlPadrao.$url."/pg/".$paginaProxima."'>Próxima > </a></li>";
+					$ultima = "<li><a href='".UrlPadrao.$url."/pg/".$totalPag."'>Última >> </a></li>";
+				}
+				
+				$Auxilio = str_replace('<%PRIMEIRA%>',$primeira,$Auxilio);
+				$Auxilio = str_replace('<%ANTERIOR%>',$anterior,$Auxilio);
+				$Auxilio = str_replace('<%PAGINACAO%>',$paginacao,$Auxilio);
+				$Auxilio = str_replace('<%PROXIMA%>',$proxima,$Auxilio);
+				$Auxilio = str_replace('<%ULTIMA%>',$ultima,$Auxilio);
+				return $Auxilio;
 			}else{
-				$paginaProxima = $pagina+1;
-				$proxima = "<li><a href='".UrlPadrao."/categoria/".$categoria."/pg/".$paginaProxima."'>Próxima >> </a></li>";
+				return "";
 			}
-				
-			$Auxilio = str_replace('<%ANTERIOR%>',$anterior,$Auxilio);
-			$Auxilio = str_replace('<%PAGINACAO%>',$paginacao,$Auxilio);
-			$Auxilio = str_replace('<%PROXIMA%>',$proxima,$Auxilio);
-			return $Auxilio;
 		}
 	}
 ?>

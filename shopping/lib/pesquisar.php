@@ -13,6 +13,9 @@
 	#monta o auxilio para listar os produtos
 	$Auxilio = $banco->CarregaHtml('itens/lista-produto-itens');
 	
+	#Pega a página
+	$numPagina = $banco->RetornaPagina($this->PaginaAux);
+	
 	$Pesquisar = $banco->ListaPesquisa($Auxilio, $busca);
 	
 	#Imprime Valores
