@@ -439,6 +439,16 @@
 					}
 					break;
 				case "loja":
+					$Sql = "SELECT P . * , L.nome AS nome_loja, S.nome AS nome_sub, C.nome AS nome_cat
+					FROM s_produtos P
+					INNER JOIN s_lojas L ON P.idloja = L.idloja
+					INNER JOIN fixo_subcategorias S ON P.idsubcategoria = S.idsubcategoria
+					INNER JOIN fixo_categorias C ON S.idcategoria = C.idcategoria
+					where L.nome = '".$PaginaAux[0]."'
+					";
+					$result = $this->Execute($Sql);
+					$num_rows = $this->Linha($result);
+					$total = ceil($num_rows/Limite);
 					break;
 			}
 			return $total;
@@ -452,6 +462,7 @@
 				//FAZER SUÍTE PAGINAÇÃO
 				switch($pagina){
 					case "pesquisar":
+						$url = "/" . $pagina . "/" . $PaginaAux[0];
 						break;
 					case "categoria":
 						$SqlSub = "SELECT *
@@ -467,6 +478,7 @@
 						}
 						break;
 					case "loja":
+						$url = "/" . $pagina . "/" . $PaginaAux[0];
 						break;
 				}
 				

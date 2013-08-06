@@ -8,11 +8,15 @@
 	$banco = new bancoloja;
 	
 	$Auxilio = $banco->CarregaHtml('itens/lista-produto-itens');
-	$Produtos = $banco->ListaProdutosLoja($Auxilio,$this->PaginaAux[0]);
+	
+	$numPagina = $banco->RetornaPagina($this->PaginaAux);
+	
+	$Produtos = $banco->ListaProdutosLoja($Auxilio,$this->PaginaAux[0], $numPagina);
+	
+	$Paginacao = $banco->MontaPaginacao($numPagina, $this->PaginaAux, $this->Pagina);
 	
 	#Imprime Valores
 	$Conteudo = $banco->CarregaHtml('loja');
-	$Conteudo = str_replace('<%URLPADRAO%>',UrlPadrao,$Conteudo);
 	$Conteudo = str_replace('<%PRODUTOS%>',$Produtos,$Conteudo);
-	
+	$Conteudo = str_replace('<%PAGINACAO%>',$Paginacao,$Conteudo);
 ?>

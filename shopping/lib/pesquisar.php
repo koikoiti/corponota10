@@ -16,9 +16,12 @@
 	#Pega a página
 	$numPagina = $banco->RetornaPagina($this->PaginaAux);
 	
-	$Pesquisar = $banco->ListaPesquisa($Auxilio, $busca);
+	$Pesquisar = $banco->ListaPesquisa($Auxilio, $busca, $numPagina);
+	
+	$Paginacao = $banco->MontaPaginacao($numPagina, $this->PaginaAux, $this->Pagina);
 	
 	#Imprime Valores
 	$Conteudo = $banco->CarregaHtml('pesquisar');
 	$Conteudo = str_replace('<%PESQUISAR%>',$Pesquisar,$Conteudo);
+	$Conteudo = str_replace('<%PAGINACAO%>',$Paginacao,$Conteudo);
 ?>

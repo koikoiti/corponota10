@@ -1,7 +1,8 @@
 <?php
 	class bancopesquisar extends banco{
 		
-		function ListaPesquisa($Auxilio, $busca){
+		function ListaPesquisa($Auxilio, $busca, $pagina){
+			$inicio = ($pagina * Limite) - Limite;
 			$Banco_Vazio = "Banco esta Vazio";
 			$busca = urldecode($busca);
 			if($busca == 'Pesquisar no Shopping'){
@@ -18,6 +19,7 @@
 							OR S.nome LIKE '%".$busca."%'
 						   )
 					ORDER BY P.nome
+					LIMIT ".$inicio.", ".Limite."
 					";
 			$result = parent::Execute($Sql);
 			$num_rows = parent::Linha($result);
