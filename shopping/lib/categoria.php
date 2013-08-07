@@ -40,7 +40,7 @@
 	$numPagina = $banco->RetornaPagina($this->PaginaAux);
 	
 	#Lista a categoria
-	if($this->PaginaAux[1] == "pg" || !isset($this->PaginaAux[1])){
+	if($this->PaginaAux[1] == "pg" || $this->PaginaAux[1] == "order"){
 		$cat = $this->PaginaAux[0];
 		$ordcat = $cat;
 		$Categoria = $banco->ListaCategoria($Auxilio, $numPagina, $cat, $order);
