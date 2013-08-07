@@ -31,6 +31,7 @@
 			$slider = $banco->Slider();
 			$navegacao = $banco->Navegacao();
 			$subcategorias = $banco->Subcategorias();
+			$order = $banco->MontaOrder();
 			
 			#Carrega Pagina Requisitada
 			if($banco->Pagina == "redireciona"){
@@ -46,6 +47,7 @@
 				$SaidaHtml = str_replace('<%LATERAL01%>',$Lateral01,$SaidaHtml);
 				$SaidaHtml = str_replace('<%LATERAL02%>',$Lateral02,$SaidaHtml);
 				$SaidaHtml = str_replace('<%SLIDER%>',$slider,$SaidaHtml);
+				$SaidaHtml = str_replace('<%ORDER%>',$order,$SaidaHtml);
 				$SaidaHtml = str_replace('<%TITULOLATERAL01%>','Lojas',$SaidaHtml);
 			}
 

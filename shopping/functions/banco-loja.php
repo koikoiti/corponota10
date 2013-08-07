@@ -1,7 +1,7 @@
 <?php
 	class bancoloja extends banco{
 		
-	function ListaProdutosLoja($Auxilio,$nomeLoja, $pagina){
+	function ListaProdutosLoja($Auxilio,$nomeLoja, $pagina, $order){
 			$inicio = ($pagina * Limite) - Limite;
 			$Banco_Vazio = "Banco esta Vazio";
 			#Query Busca Docs
@@ -11,7 +11,7 @@
 					INNER JOIN fixo_subcategorias S ON P.idsubcategoria = S.idsubcategoria
 					INNER JOIN fixo_categorias C ON S.idcategoria = C.idcategoria
 					where L.nome = '".$nomeLoja."'
-					ORDER BY P.nome
+					ORDER BY ".$order." 
 					LIMIT ".$inicio.", ".Limite."
 					";
 			$result = parent::Execute($Sql);

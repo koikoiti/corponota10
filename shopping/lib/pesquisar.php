@@ -24,4 +24,5 @@
 	$Conteudo = $banco->CarregaHtml('pesquisar');
 	$Conteudo = str_replace('<%PESQUISAR%>',$Pesquisar,$Conteudo);
 	$Conteudo = str_replace('<%PAGINACAO%>',$Paginacao,$Conteudo);
+	$Conteudo = str_replace('<%BUSCA%>',$busca,$Conteudo);
 ?>

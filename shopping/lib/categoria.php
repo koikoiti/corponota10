@@ -15,9 +15,11 @@
 	#Lista a categoria
 	if($this->PaginaAux[1] == "pg" || !isset($this->PaginaAux[1])){
 		$cat = $this->PaginaAux[0];
+		$ordcat = $cat;
 		$Categoria = $banco->ListaCategoria($Auxilio, $numPagina, $cat);
 	}else{
 		$sub = $this->PaginaAux[1];
+		$ordcat = $this->PaginaAux[0] . "/" . $this->PaginaAux[1];;
 		$Categoria = $banco->ListaSubcategoria($Auxilio, $numPagina, $sub);
 	}
 	
@@ -27,4 +29,5 @@
 	$Conteudo = $banco->CarregaHtml('categoria');
 	$Conteudo = str_replace('<%CATEGORIA%>',$Categoria,$Conteudo);
 	$Conteudo = str_replace('<%PAGINACAO%>',$Paginacao,$Conteudo);
+	$Conteudo = str_replace('<%ORDCAT%>',$ordcat,$Conteudo);
 ?>

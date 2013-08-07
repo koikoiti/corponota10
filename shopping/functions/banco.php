@@ -478,7 +478,10 @@
 						}
 						break;
 					case "loja":
-						$url = "/" . $pagina . "/" . $PaginaAux[0];
+						$url .= "/" . $pagina . "/" . $PaginaAux[0];
+						if($PaginaAux[1] == "order"){
+							$url .= "/order/" . $PaginaAux[2];
+						}
 						break;
 				}
 				
@@ -534,5 +537,25 @@
 				return "";
 			}
 		}
+		
+		#Função que monta a ordenação (select)
+		function MontaOrder(){
+			if($this->Pagina == "produto"){
+				return "";
+			}else{
+				$order = "
+						Listar Por:
+							<select name='ordenacao' onchange='ordena(this);'>
+								<option selected value='-'>---</option>
+								<option value='nome'>Nome</option>
+								<option value='menorMaior'>Menor para Maior</option>
+								<option value='maiorMenor'>Maior para Menor</option>
+								<option value='clicados'>Mais Clicados</option>
+							</select>
+							";
+				return $order;
+			}
+		}
+		
 	}
 ?>
