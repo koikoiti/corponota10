@@ -463,6 +463,9 @@
 				switch($pagina){
 					case "pesquisar":
 						$url = "/" . $pagina . "/" . $PaginaAux[0];
+						if($PaginaAux[1] == "order"){
+							$url .= "/order/" . $PaginaAux[2];
+						}
 						break;
 					case "categoria":
 						$SqlSub = "SELECT *
@@ -471,10 +474,17 @@
 								";
 						$resultSub = $this->Execute($SqlSub);
 						$num_rowsSub = $this->Linha($resultSub);
+						//Se for subcategoria
 						if($num_rowsSub){
 							$url = "/" . $pagina . "/" . $PaginaAux[0] . "/" . $PaginaAux[1];
+							if($PaginaAux[2] == "order"){
+								$url .= "/order/" . $PaginaAux[3];
+							}
 						}else{
 							$url = "/" . $pagina . "/" . $PaginaAux[0];
+							if($PaginaAux[1] == "order"){
+								$url .= "/order/" . $PaginaAux[2];
+							}
 						}
 						break;
 					case "loja":

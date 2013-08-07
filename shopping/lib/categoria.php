@@ -6,6 +6,33 @@
 	#Instancia objeto que vai tratar o banco de dados dessa pagina
 	$banco = new bancocategoria;
 	
+	#Trabalha com ordenação
+	if($this->PaginaAux[1] == "order"){
+		switch($this->PaginaAux[2]){
+			case "nome": $order = "P.nome ASC";
+			break;
+			case "menorMaior": $order = "P.preco ASC";
+			break;
+			case "maiorMenor": $order = "P.preco DESC";
+			break;
+			case "clicados": $order = "P.contaclick ASC";
+			break;
+		}
+	}elseif($this->PaginaAux[2] == "order"){
+		switch($this->PaginaAux[3]){
+			case "nome": $order = "P.nome ASC";
+			break;
+			case "menorMaior": $order = "P.preco ASC";
+			break;
+			case "maiorMenor": $order = "P.preco DESC";
+			break;
+			case "clicados": $order = "P.contaclick ASC";
+			break;
+		}
+	}else{
+		$order = "P.nome ASC";
+	}
+	
 	#monta o auxilio para listar os produtos
 	$Auxilio = $banco->CarregaHtml('itens/lista-produto-itens');
 	
@@ -16,11 +43,11 @@
 	if($this->PaginaAux[1] == "pg" || !isset($this->PaginaAux[1])){
 		$cat = $this->PaginaAux[0];
 		$ordcat = $cat;
-		$Categoria = $banco->ListaCategoria($Auxilio, $numPagina, $cat);
+		$Categoria = $banco->ListaCategoria($Auxilio, $numPagina, $cat, $order);
 	}else{
 		$sub = $this->PaginaAux[1];
 		$ordcat = $this->PaginaAux[0] . "/" . $this->PaginaAux[1];;
-		$Categoria = $banco->ListaSubcategoria($Auxilio, $numPagina, $sub);
+		$Categoria = $banco->ListaSubcategoria($Auxilio, $numPagina, $sub, $order);
 	}
 	
 	$Paginacao = $banco->MontaPaginacao($numPagina, $this->PaginaAux, $this->Pagina);

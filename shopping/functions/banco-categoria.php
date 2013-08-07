@@ -2,7 +2,7 @@
 	class bancocategoria extends banco{
 		
 		#Função que lista as categorias
-		function ListaCategoria($Auxilio, $pagina, $categoria){
+		function ListaCategoria($Auxilio, $pagina, $categoria, $order){
 			$inicio = ($pagina * Limite) - Limite;
 			$Banco_Vazio = "Banco esta Vazio";
 			#Query Busca Produtos
@@ -12,7 +12,7 @@
 					INNER JOIN fixo_subcategorias S ON P.idsubcategoria = S.idsubcategoria
 					INNER JOIN fixo_categorias C ON S.idcategoria = C.idcategoria
 					WHERE C.nome = '".$categoria."'
-					ORDER BY P.nome
+					ORDER BY ".$order." 
 					LIMIT ".$inicio.", ".Limite."
 					";
 			$result = parent::Execute($Sql);
@@ -39,7 +39,7 @@
 			return $Categoria;
 		}
 		
-		function ListaSubcategoria($Auxilio, $pagina, $subcategoria){
+		function ListaSubcategoria($Auxilio, $pagina, $subcategoria, $order){
 			$inicio = ($pagina * Limite) - Limite;
 			$Banco_Vazio = "Banco esta Vazio";
 			#Query Busca Produtos
@@ -49,7 +49,7 @@
 					INNER JOIN fixo_subcategorias S ON P.idsubcategoria = S.idsubcategoria
 					INNER JOIN fixo_categorias C ON S.idcategoria = C.idcategoria
 					WHERE S.nome = '".$subcategoria."'
-					ORDER BY P.nome
+					ORDER BY ".$order." 
 					LIMIT ".$inicio.", ".Limite."
 					";
 			$result = parent::Execute($Sql);
