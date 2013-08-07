@@ -10,5 +10,11 @@
 			VALUES ('".$hora."' , '".$_SERVER['REMOTE_ADDR']."' , '".$_POST['link']."' , '".$_POST['idproduto']."' )
 			";
 	$result = mysql_query($sql);
+	
+	#update na tabela produto aumentando o click
+	$sqlUpdate = "
+					Update s_produtos set contaclick = (contaclick +1) where idproduto = '".$_POST['idproduto']."'
+				";
+	$result = mysql_query($sqlUpdate);
 	echo true;
 ?>
