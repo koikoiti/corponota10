@@ -15,7 +15,7 @@
 			break;
 			case "maiorMenor": $order = "P.preco DESC";
 			break;
-			case "clicados": $order = "P.contaclick ASC";
+			case "clicados": $order = "P.contaclick DESC";
 			break;
 		}
 	}elseif($this->PaginaAux[2] == "order"){
@@ -26,7 +26,7 @@
 			break;
 			case "maiorMenor": $order = "P.preco DESC";
 			break;
-			case "clicados": $order = "P.contaclick ASC";
+			case "clicados": $order = "P.contaclick DESC";
 			break;
 		}
 	}else{
@@ -40,7 +40,7 @@
 	$numPagina = $banco->RetornaPagina($this->PaginaAux);
 	
 	#Lista a categoria
-	if($this->PaginaAux[1] == "pg" || $this->PaginaAux[1] == "order"){
+	if($this->PaginaAux[1] == "pg" || $this->PaginaAux[1] == "order" || !isset($this->PaginaAux[1])){
 		$cat = $this->PaginaAux[0];
 		$ordcat = $cat;
 		$Categoria = $banco->ListaCategoria($Auxilio, $numPagina, $cat, $order);

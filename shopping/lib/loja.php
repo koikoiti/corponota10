@@ -16,7 +16,7 @@
 				break;
 			case "maiorMenor": $order = "P.preco DESC";
 				break;
-			case "clicados": $order = "P.contaclick ASC";
+			case "clicados": $order = "P.contaclick DESC";
 				break;
 		}
 	}else{

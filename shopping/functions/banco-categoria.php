@@ -15,6 +15,7 @@
 					ORDER BY ".$order." 
 					LIMIT ".$inicio.", ".Limite."
 					";
+			echo $Sql;
 			$result = parent::Execute($Sql);
 			$num_rows = parent::Linha($result);
 			#Monta no Html a Listagem
