@@ -258,6 +258,61 @@
 			
 		}
 		
+		#Funcao que monta o menu
+		function MontaMenu(){
+			$menu = '<div class="menu-secondary-container">
+			<ul class="menus menu-secondary sf-js-enabled">
+				<li class="cat-item cat-item-1"><a href="<%URLMODELO%>/shopping/categoria/Massa-Muscular">Massa Muscular</a></li>
+				<li class="cat-item cat-item-2"><a href="<%URLMODELO%>/shopping/categoria/Emagrecimento">Emagrecimento</a></li>
+				<li class="cat-item cat-item-3"><a href="<%URLMODELO%>/shopping/categoria/Vitaminas-&-Minerais">Vitaminas & Minerais</a></li>
+				<li class="cat-item cat-item-4"><a href="<%URLMODELO%>/shopping/categoria/Energia">Energia</a></li>
+				<li class="cat-item cat-item-4"><a href="<%URLMODELO%>/shopping/categoria/Outros">Outros</a></li>
+			</ul>
+			</div>';
+			
+			if ($this->Pagina == 'loja'){
+				$menu = '<div class="menu-secondary-container">
+				<ul class="menus menu-secondary sf-js-enabled">
+				<li class="cat-item cat-item-1"><a href="<%URLMODELO%>/shopping/loja/'.$this->PaginaAux[0].'/Massa-Muscular">Massa Muscular</a></li>
+				<li class="cat-item cat-item-2"><a href="<%URLMODELO%>/shopping/loja/'.$this->PaginaAux[0].'/Emagrecimento">Emagrecimento</a></li>
+				<li class="cat-item cat-item-3"><a href="<%URLMODELO%>/shopping/loja/'.$this->PaginaAux[0].'/Vitaminas-&-Minerais">Vitaminas & Minerais</a></li>
+				<li class="cat-item cat-item-4"><a href="<%URLMODELO%>/shopping/loja/'.$this->PaginaAux[0].'/Energia">Energia</a></li>
+				<li class="cat-item cat-item-4"><a href="<%URLMODELO%>/shopping/loja/'.$this->PaginaAux[0].'/Outros">Outros</a></li>
+				</ul>
+				</div>';
+			}
+			$menu = str_replace('<%URLMODELO%>',UrlModelo,$menu);
+			return $menu;
+		}
+		
+	#funcao busca subcategoria por nome
+		function BuscaSubCategoria($paginaAux){
+			$Sql = "SELECT * FROM fixo_subcategorias
+						WHERE nome = '".$paginaAux[2]."'
+						";
+			$result = $this->Execute($Sql);
+			$num_rows = $this->Linha($result);
+			if ($num_rows){
+				return true;
+			}else{
+				return false;
+			}
+		}
+		
+		#funcao busca categoria por nome
+		function BuscaCategoria($paginaAux){
+			$Sql = "SELECT * FROM fixo_categorias
+						WHERE nome = '".$paginaAux[1]."'
+						";
+			$result = $this->Execute($Sql);
+			$num_rows = $this->Linha($result);
+			if ($num_rows){
+				return true;
+			}else{
+				return false;
+			}
+		}
+		
 		#Função que monta o menu com subcategorias
 		function Subcategorias(){
 			if($this->Pagina == "categoria"){
@@ -283,6 +338,36 @@
 					while( $rs = mysql_fetch_array($result , MYSQL_ASSOC) )
 					{
 						$subcategorias .= '<li class="cat-item cat-item-1"><a href="'.UrlPadrao.'/categoria/'. $categoria . '/'. $rs["nome"] .'">'. str_replace("-", " ", $rs["nome"]) .'</a></li>';
+					}
+				}
+				
+				$subcategorias .= "</ul></div>";
+				return $subcategorias;
+					
+			# Verifica se é as categorias da loja	
+			}elseif($this->Pagina == "loja" && $this->BuscaCategoria($this->PaginaAux)){
+				$categoria = $this->PaginaAux[1];
+				$subcategorias = '<div class="menu-secondary-container">
+									<ul class="menus menu-secondary sf-js-enabled">';
+				
+				$SqlA = "SELECT idcategoria FROM fixo_categorias
+						WHERE nome = '".$categoria."'
+						";
+				$resultA = $this->Execute($SqlA);
+				$rsA = mysql_fetch_array($resultA, MYSQL_ASSOC);
+				
+				$id = $rsA['idcategoria'];
+				
+				$Sql = "SELECT nome FROM fixo_subcategorias
+						WHERE idcategoria = ".$id."
+						";
+				$result = $this->Execute($Sql);
+				$num_rows = $this->Linha($result);
+				#Monta no Html a Listagem
+				if ($num_rows){
+					while( $rs = mysql_fetch_array($result , MYSQL_ASSOC) )
+					{
+						$subcategorias .= '<li class="cat-item cat-item-1"><a href="'.UrlPadrao.'/loja/'.$this->PaginaAux[0].'/'. $categoria . '/'. $rs["nome"] .'">'. str_replace("-", " ", $rs["nome"]) .'</a></li>';
 					}
 				}
 				
@@ -379,6 +464,17 @@
 			window.open(".$link.");
 		  </script>
 		 ";
+		}
+		
+		#Funcao que retorna o order
+		function RetornaOrder($PaginaAux){
+			$casa = array_search("order", $PaginaAux);
+			if($casa){
+				$order = $PaginaAux[($casa+1)];
+			}else{
+				$order = 'nome';
+			}
+			return $order;
 		}
 		
 		#Função que retorna a página

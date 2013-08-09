@@ -30,6 +30,7 @@
 			$Lateral02 = $banco->Lateral02();
 			$slider = $banco->Slider();
 			$navegacao = $banco->Navegacao();
+			$menu = $banco->MontaMenu();
 			$subcategorias = $banco->Subcategorias();
 			$order = $banco->MontaOrder();
 			
@@ -43,6 +44,7 @@
 				$SaidaHtml = str_replace('<%URLPADRAO%>',UrlPadrao,$SaidaHtml);
 				$SaidaHtml = str_replace('<%URLMODELO%>',UrlModelo,$SaidaHtml);
 				$SaidaHtml = str_replace('<%NAVEGACAO%>',$navegacao,$SaidaHtml);
+				$SaidaHtml = str_replace('<%MENU%>',$menu,$SaidaHtml);
 				$SaidaHtml = str_replace('<%SUBCATEGORIAS%>',$subcategorias,$SaidaHtml);
 				$SaidaHtml = str_replace('<%LATERAL01%>',$Lateral01,$SaidaHtml);
 				$SaidaHtml = str_replace('<%LATERAL02%>',$Lateral02,$SaidaHtml);
