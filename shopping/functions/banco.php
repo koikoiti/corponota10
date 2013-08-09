@@ -535,12 +535,26 @@
 					}
 					break;
 				case "loja":
+					if ($this->BuscaCategoria($PaginaAux)){
+						$cat = $PaginaAux[1];
+					}
+					
+					if ($this->BuscaSubCategoria($PaginaAux)){
+						$sub = $PaginaAux[2];
+					}
+					if($cat && !$sub){
+						$where = "L.nome = '".$PaginaAux[0]."' AND C.nome = '".$cat."' ";
+					}elseif($sub){
+						$where = "L.nome = '".$PaginaAux[0]."' AND S.nome = '".$sub."' ";
+					}else{
+						$where = "L.nome = '".$PaginaAux[0]."'";
+					}
 					$Sql = "SELECT P . * , L.nome AS nome_loja, S.nome AS nome_sub, C.nome AS nome_cat
 					FROM s_produtos P
 					INNER JOIN s_lojas L ON P.idloja = L.idloja
 					INNER JOIN fixo_subcategorias S ON P.idsubcategoria = S.idsubcategoria
 					INNER JOIN fixo_categorias C ON S.idcategoria = C.idcategoria
-					where L.nome = '".$PaginaAux[0]."'
+					where ".$where."
 					";
 					$result = $this->Execute($Sql);
 					$num_rows = $this->Linha($result);
@@ -552,10 +566,10 @@
 		
 		#Função que monta a Paginação da categoria
 		function MontaPaginacao($numPagina, $PaginaAux, $pagina){
+			#Pega o total de páginas
 			$totalPag = $this->RetornaTotal($PaginaAux, $pagina);
 			if($totalPag > 1){
 				$Auxilio = $this->CarregaHtml('paginacao');
-				//FAZER SUÍTE PAGINAÇÃO
 				switch($pagina){
 					case "pesquisar":
 						$url = "/" . $pagina . "/" . $PaginaAux[0];
@@ -585,8 +599,15 @@
 						break;
 					case "loja":
 						$url .= "/" . $pagina . "/" . $PaginaAux[0];
-						if($PaginaAux[1] == "order"){
-							$url .= "/order/" . $PaginaAux[2];
+						if($this->BuscaCategoria($PaginaAux)){
+							$url .= "/".$PaginaAux[1];
+						}
+						if($this->BuscaSubCategoria($PaginaAux)){
+							$url .= "/".$PaginaAux[2];
+						}
+						$casa = array_search("order", $PaginaAux);
+						if($casa){
+							$url .= "/order/" . $PaginaAux[($casa+1)];
 						}
 						break;
 				}
