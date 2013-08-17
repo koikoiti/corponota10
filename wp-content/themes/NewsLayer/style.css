@@ -341,6 +341,12 @@ a:focus {
     background: #fff;
 }
 
+.image-produto {
+	width: 180px;
+	height: 180px;
+	margin: 10px;
+}
+
 .page-title {
     color: #333;
     margin: 0px 0 10px 0;
@@ -385,7 +391,6 @@ a:focus {
 
 .readmore {
     margin-bottom: 15px;
-    float: right;
 }
 
 .readmore a {
@@ -1059,6 +1064,8 @@ a:focus {
     margin-top: 10px;
 }
 
+
+
 /* Social Profiles Widget
 ----------------------------*/
 .social-profiles-widget img {
@@ -1168,6 +1175,11 @@ a.tweets-widget-time:hover {
 -------------------------------------------------------------- */
 #paginacao {
 	padding: 3px;
+	clear: both;
+	width: 680px;
+	margin: auto;
+	padding-top: 20px;
+	text-align: center;
 }
 #paginacao ul {
 	list-style-type: none;
@@ -1218,8 +1230,19 @@ a.tweets-widget-time:hover {
 	cursor: pointer;
 }
 .produto-inicio-unico{
-	width: 100%;
-	background-color: red;
+	margin-bottom: 30px;
+	padding: 20px;
+	border: solid;
+	border-color: #E8E8E8;
+	border-width: 1px;
+}
+
+.produto-atual {
+	padding-top: 60px;
+	padding-right: 10px;
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 2px;
 }
 
 .produto-inicio{
@@ -1234,6 +1257,12 @@ a.tweets-widget-time:hover {
 	background-color: #ffffff;
 	border:1px solid #EFEFEF;
 	
+}
+
+.produto-ordem {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 5px;
 }
 
 .loja-inicio{

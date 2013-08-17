@@ -671,6 +671,7 @@
 				return "";
 			}else{
 				$order = "
+						<div class='produto-ordem'>
 						Listar Por:
 							<select name='ordenacao' onchange='ordena(this);'>
 								<option selected value='-'>---</option>
@@ -678,7 +679,7 @@
 								<option value='menorMaior'>Menor para Maior</option>
 								<option value='maiorMenor'>Maior para Menor</option>
 								<option value='clicados'>Mais Clicados</option>
-							</select>
+							</select></div>
 							";
 				return $order;
 			}

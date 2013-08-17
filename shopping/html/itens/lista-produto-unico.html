@@ -1,12 +1,13 @@
 <div class="produto-inicio-unico">
-<div style="height: 40px;"> <%CATEGORIA%> > <%SUBCATEGORIA%></div><p>
-<a href="<%URLPADRAO%>/produto/<%ID%>"><img src="<%IMAGEM%>" alt="<%NOME%>" height="120" width="120"></a><p>
-<div style="height: 30px;"><%NOME%></div><p>
-<%PRECO%><p>
+<div> <%CATEGORIA%> > <%SUBCATEGORIA%></div>
+<div style="float:left;"> <a href="<%URLPADRAO%>/produto/<%ID%>"><img src="<%IMAGEM%>" alt="<%NOME%>" class="image-produto"></a></div>
+<div class="produto-atual"> 
+<%NOME%><br>
+<%PRECO%><br>
 <%NOMELOJA%>
-<div class="readmore" id="readmore-personalizado-unico" onclick="contaclick('<%LINK%>','<%ID%>');"><a style="width:100px;">Ir Para Loja</a></div>
 </div>
-
+	<div class="readmore" id="readmore-personalizado-unico" onclick="contaclick('<%LINK%>','<%ID%>');" style="text-align: right; clear: both;"><a style="width:100px; text-align: center">Ir Para Loja</a></div>
+</div>
 <!-- MUDAR O LOCALHOST QUANDO UPAR -->
 <script> 
 function contaclick(link,idproduto){
