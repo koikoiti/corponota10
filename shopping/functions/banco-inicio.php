@@ -10,6 +10,7 @@
 					INNER JOIN s_lojas L ON P.idloja = L.idloja
 					INNER JOIN fixo_subcategorias S ON P.idsubcategoria = S.idsubcategoria
 					INNER JOIN fixo_categorias C ON S.idcategoria = C.idcategoria
+					Order by Rand() limit 12
 					";
 			$result = parent::Execute($Sql);
 			$num_rows = parent::Linha($result);
