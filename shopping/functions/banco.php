@@ -667,7 +667,7 @@
 		
 		#Função que monta a ordenação (select)
 		function MontaOrder(){
-			if($this->Pagina == "produto"){
+			if($this->Pagina == "produto" || !isset($this->Pagina)){
 				return "";
 			}else{
 				$order = "
