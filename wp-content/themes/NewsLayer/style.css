@@ -1229,21 +1229,52 @@ a.tweets-widget-time:hover {
 	margin-right: 0px;
 	cursor: pointer;
 }
+
+#produto-similar{
+	width:659px;
+	}
 .produto-inicio-unico{
-	margin-bottom: 30px;
+	height:300px;
+	margin-left: -4px;
+	width: 639px;
+	margin-bottom: 10px;
 	padding: 20px;
 	border: solid;
 	border-color: #E8E8E8;
 	border-width: 1px;
 }
 
+#imagem-produto-unico{
+	margin-top: 41px;
+	float:left;
+	}
+
+.div-categ-subcateg{
+	border: solid;
+	border-color: #E8E8E8;
+	border-width: 1px;
+	padding-top: 10px;
+	}
+	
+.categ-subcateg{
+	color: #0298CA;
+	font-family: 'Oswald',sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	}
+
 .produto-atual {
+	margin-top: 51px;
+	color: #808080;
+	font-family: 'Oswald',sans-serif;
+	line-height:120%;
+	float: none;
+	padding-right: 0px;
 	padding-top: 60px;
-	padding-right: 10px;
 	font-size: 18px;
-	font-weight: bold;
-	letter-spacing: 2px;
-}
+	font-weight: normal;
+	letter-spacing: 1px;
+	}
 
 .produto-inicio{
 	width: 680px;

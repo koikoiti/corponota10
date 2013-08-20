@@ -1,12 +1,15 @@
 <div class="produto-inicio-unico">
-<div> <%CATEGORIA%> > <%SUBCATEGORIA%></div>
-<div style="float:left;"> <a href="<%URLPADRAO%>/produto/<%ID%>"><img src="<%IMAGEM%>" alt="<%NOME%>" class="image-produto"></a></div>
-<div class="produto-atual"> 
-<%NOME%><br>
-<%PRECO%><br>
-<%NOMELOJA%>
+<div class="div-categ-subcateg"><center><a class="categ-subcateg" href="<%URLPADRAO%>/categoria/<%CATEGORIA%>"><%CATEGORIA%></a> > <a class="categ-subcateg" href="<%URLPADRAO%>/categoria/<%CATEGORIA%>/<%SUBCATEGORIA%>"><%SUBCATEGORIA%></a></center><br></div>
+<div id="imagem-produto-unico">
+	<center><a href="<%URLPADRAO%>/produto/<%ID%>"><img src="<%IMAGEM%>" alt="<%NOME%>" class="image-produto"></a></center>
 </div>
-	<div class="readmore" id="readmore-personalizado-unico" onclick="contaclick('<%LINK%>','<%ID%>');" style="text-align: right; clear: both;"><a style="width:100px; text-align: center">Ir Para Loja</a></div>
+<div class="produto-atual"> 
+Nome: <%NOME%><br>
+Preço: <%PRECO%><br>
+Loja: <%NOMELOJA%><br>
+<div class="readmore" id="readmore-personalizado-unico" onclick="contaclick('<%LINK%>','<%ID%>');"><a style="width:100px; text-align: center">Ir Para Loja</a></div>
+</div>
+	
 </div>
 <!-- MUDAR O LOCALHOST QUANDO UPAR -->
 <script> 

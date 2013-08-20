@@ -57,7 +57,7 @@
 					INNER JOIN fixo_subcategorias S ON P.idsubcategoria = S.idsubcategoria
 					INNER JOIN fixo_categorias C ON S.idcategoria = C.idcategoria
 					WHERE P.idsubcategoria = '".$idsubcategoria."'
-					LIMIT 0 , 6
+					Order by Rand() LIMIT 6
 					";
 			$result = parent::Execute($Sql);
 			$num_rows = parent::Linha($result);
